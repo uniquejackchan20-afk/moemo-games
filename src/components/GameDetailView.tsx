@@ -10,6 +10,7 @@ import MiniGameCafe from './MiniGameCafe';
 import MiniGameJelly from './MiniGameJelly';
 import MiniGameWood from './MiniGameWood';
 import MiniGameSnake from './MiniGameSnake';
+import MiniGameSoduku from './MiniGameSoduku';
 import { Heart, Star, Send, Share2, Play, ChevronRight, Gamepad2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
@@ -143,9 +144,10 @@ export default function GameDetailView({
               {game.id === 'jelly' && <MiniGameJelly />}
               {game.id === 'wood' && <MiniGameWood />}
               {game.id === 'snake' && <MiniGameSnake />}
+              {game.id === 'sudoku' && <MiniGameSoduku />}
               
               {/* Fallback games display for non-playable cards */}
-              {game.id !== 'cafe' && game.id !== 'jelly' && game.id !== 'wood' && game.id !== 'snake' && (
+              {game.id !== 'cafe' && game.id !== 'jelly' && game.id !== 'wood' && game.id !== 'snake' && game.id !== 'sudoku' && (
                 <div className="p-8 text-center flex flex-col items-center justify-center min-h-[360px] max-w-lg mx-auto bg-white rounded-3xl border-4 border-teal-50 my-4 shadow-md">
                   <div className="bg-[#a7f3d0] p-4 rounded-full text-[#1b6b4f] mb-4 animate-bounce">
                     <Gamepad2 className="w-10 h-10" />
@@ -205,6 +207,12 @@ export default function GameDetailView({
                     <li>• 2: 吞食美味的水果（草莓、巨桃、葡萄、星星）以賺取積分與生長蛇節。</li>
                     <li>• 3: 避開咬擊到自己的身體，解鎖更多華麗精美的特色小蛇外觀！</li>
                   </>
+                ) : game.id === 'sudoku' ? (
+                  <>
+                    <li>• 1: 點選格子以選擇想要填補數字或寫草稿的地方。</li>
+                    <li>• 2: 點擊下方 1–9 數字鍵盤填值，或啟用「草稿筆記」記錄候選數字。</li>
+                    <li>• 3: 完成橫排、豎列與 3x3 各格且數字皆不重疊即可獲勝！</li>
+                  </>
                 ) : (
                   <>
                     <li>• 1: 通過可愛的美工與舒緩背景琴曲享受休閒。</li>
@@ -222,8 +230,17 @@ export default function GameDetailView({
                 控制說明
               </h4>
               <div className="text-xs text-gray-500 font-medium space-y-1.5">
-                <p>• <span className="font-bold text-gray-700">滑鼠點擊/觸摸觸碰：</span> 遊戲中的絕大部分按鈕/素材皆支持點按點選。</p>
-                <p>• <span className="font-bold text-gray-700">數據存檔：</span> 本遊戲預覽包含關卡進度與金幣跟隨，重置或重載網頁前有效。</p>
+                {game.id === 'sudoku' ? (
+                  <>
+                    <p>• <span className="font-bold text-gray-700">鍵盤快速控制：</span> 支持鍵盤 <strong>1-9</strong> 數字填空、<strong>Backspace/Delete</strong> 擦拭，以及 <strong>方向鍵</strong> 移動選擇。</p>
+                    <p>• <span className="font-bold text-gray-750">手稿切換：</span> 按字母鍵 <strong>N</strong> 可以一鍵切換鉛筆記備註狀態噢。</p>
+                  </>
+                ) : (
+                  <>
+                    <p>• <span className="font-bold text-gray-700">滑鼠點擊/觸摸觸碰：</span> 遊戲中的絕大部分按鈕/素材皆支持點按點選。</p>
+                    <p>• <span className="font-bold text-gray-700">數據存檔：</span> 本遊戲預覽包含關卡進度與金幣跟隨，重置或重載網頁前有效。</p>
+                  </>
+                )}
               </div>
             </div>
 

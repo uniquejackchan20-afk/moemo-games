@@ -61,6 +61,24 @@ export const INITIAL_COMMENTS: Record<string, Comment[]> = {
       timeAgo: "1 小時前",
       likes: 7
     }
+  ],
+  sudoku: [
+    {
+      id: "comment_sudoku_1",
+      author: "九格魔法師",
+      avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuCIbpPAVJYf9pTccLQsaOk-IYcP5Cu0unzqkpFhbn1boKQwDg66qPyufc0kD-lJ8XqTjxYRgGi18YtwZ02vDhSD3HmVB6XGZO-Iw5GYVJNs4SGjN2-6GJxXBzwV_BY4ywU9VG2crSKCj_N-_2Z7ni5ji9RLQ6jVmGb0T6U8jD5rlMSBRajuYfNCIZZic4PsKxFClQttRrL0HEZIfmlut8oxJGjd5dtxeCIUKh-n7Swuw0hs-ppsmNH_Vvonc4_hwQ2zzeezli5thFRW",
+      content: "陪讀的小松鼠米奧好萌呀！各種表情動作神同步我的答題情況。一邊動腦一邊被療癒！",
+      timeAgo: "15 分鐘前",
+      likes: 9
+    },
+    {
+      id: "comment_sudoku_2",
+      author: "腦力大作戰",
+      avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuCYM1WChbAHYMPMMBB6IqLKRh344RuCgtHJQUCoQLBCBKw3yCE-aOsfbtLSEcsVDIbXUerUe4tNiXIbBtFCIOjZZifpxWJLqvQNYEECJIKecLeAWrPdQobwDxhidzAyX0AAEfYEU1nKTWrhBk1BGk5PlNyA9jhCkcjEq_NSLc2eQWtI1W7Onh5Ctnh_hQUbkXEFTEPa_bJwhghbbmaNoOE_tuNtF5sDdWGJLY9Ij7nnuvSHN-OAtuHW0xidpwgSld2kqNciIKzzweNx",
+      content: "居然支持鍵盤快捷鍵和自動高亮，玩起來非常絲滑。草稿筆記功能太實用了，推薦硬核玩家挑戰神速難度！",
+      timeAgo: "2 小時前",
+      likes: 4
+    }
   ]
 };
 
@@ -128,6 +146,22 @@ export const GAMES_DATA: Game[] = [
     image: "/src/assets/images/snake_king_cover_1780230735095.png",
     description: "控制超萌森林果凍蛇，在百吃不厭的草地冒險裡，收集草莓與黃金果實，挑戰最長蛇王極限！",
     hotness: 90
+  },
+  {
+    id: "sudoku",
+    title: "萌寵數字九宮格",
+    category: "puzzle",
+    categoryName: "益智解謎",
+    tags: ["邏輯", "燒腦", "療癒"],
+    difficulty: "medium",
+    difficultyName: "中等",
+    playTime: "medium",
+    playTimeName: "5-15分鐘 (挑戰)",
+    rating: 4.8,
+    timesPlayed: 43200,
+    image: "/src/assets/images/sudoku_cover_1780231940664.png",
+    description: "與森林奇妙萌寵一起開動腦筋！在木香悠遠的九宮格魔法盤上，填寫彩色數字並解密療癒的益智數獨謎題。",
+    hotness: 91
   }
 ];
 
