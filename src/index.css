@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Custom palette matching 萌萌小遊戲 */
+  --color-primary: #1b6b4f;
+  --color-primary-container: #a7f3d0;
+  --color-on-primary-container: #247156;
+  --color-secondary: #765469;
+  --color-secondary-container: #fdd0ea;
+  --color-on-secondary-container: #79576c;
+  --color-tertiary: #695f02;
+  --color-tertiary-container: #f3e580;
+  --color-on-tertiary-container: #6f660a;
+  
+  --color-surface: #f8f9fa;
+  --color-surface-dim: #d9dadb;
+  --color-surface-container: #edeeef;
+  --color-surface-container-low: #f3f4f5;
+  --color-surface-container-lowest: #ffffff;
+  --color-outline: #6f7973;
+  --color-outline-variant: #bec9c2;
+}
+
+/* Custom interactive styling for the bubbly marshmallow effect */
+.cloud-container {
+  box-shadow: 0 10px 25px -5px rgba(167, 243, 208, 0.25);
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.marshmallow-button {
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border-bottom: 4px solid rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.marshmallow-button:active {
+  transform: translateY(2px);
+  border-bottom-width: 0px;
+}
+
+.bubble-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 30px -10px rgba(167, 243, 208, 0.4);
+}
+
+/* Base style settings */
+body {
+  background: radial-gradient(circle at top left, #f8f9fa 0%, #e7f5ef 100%);
+  min-height: 100vh;
+  font-family: var(--font-sans);
+}
+
+/* Custom scrollbars for adorable cards */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--color-outline-variant);
+  border-radius: 9999px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--color-outline);
+}
+
+/* Material Symbols vertical alignment */
+.material-symbols-outlined {
+  vertical-align: middle;
+}

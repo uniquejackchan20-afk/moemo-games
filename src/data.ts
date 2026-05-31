@@ -1,0 +1,387 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+import { Game, Comment } from './types';
+
+export const INITIAL_COMMENTS: Record<string, Comment[]> = {
+  cafe: [
+    {
+      id: "comment_1",
+      author: "可愛喵喵控",
+      avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuCIbpPAVJYf9pTccLQsaOk-IYcP5Cu0unzqkpFhbn1boKQwDg66qPyufc0kD-lJ8XqTjxYRgGi18YtwZ02vDhSD3HmVB6XGZO-Iw5GYVJNs4SGjN2-6GJxXBzwV_BY4ywU9VG2crSKCj_N-_2Z7ni5ji9RLQ6jVmGb0T6U8jD5rlMSBRajuYfNCIZZic4PsKxFClQttRrL0HEZIfmlut8oxJGjd5dtxeCIUKh-n7Swuw0hs-ppsmNH_Vvonc4_hwQ2zzeezli5thFRW",
+      content: "這款遊戲真的超級療癒！紅熊貓店長太可愛了，每次端咖啡的手勢都讓我融化。推薦給大家舒壓～",
+      timeAgo: "2 小時前",
+      likes: 15
+    },
+    {
+      id: "comment_2",
+      author: "小點心大師",
+      avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuCYM1WChbAHYMPMMBB6IqLKRh344RuCgtHJQUCoQLBCBKw3yCE-aOsfbtLSEcsVDIbXUerUe4tNiXIbBtFCIOjZZifpxWJLqvQNYEECJIKecLeAWrPdQobwDxhidzAyX0AAEfYEU1nKTWrhBk1BGk5PlNyA9jhCkcjEq_NSLc2eQWtI1W7Onh5Ctnh_hQUbkXEFTEPa_bJwhghbbmaNoOE_tuNtF5sDdWGJLY9Ij7nnuvSHN-OAtuHW0xidpwgSld2kqNciIKzzweNx",
+      content: "解鎖到第三層裝飾了！那個雲朵沙發真的很好看。希望能多出一點新的小動物角色。",
+      timeAgo: "5 小時前",
+      likes: 8
+    }
+  ],
+  jelly: [
+    {
+      id: "comment_3",
+      author: "消消大王",
+      avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuCIbpPAVJYf9pTccLQsaOk-IYcP5Cu0unzqkpFhbn1boKQwDg66qPyufc0kD-lJ8XqTjxYRgGi18YtwZ02vDhSD3HmVB6XGZO-Iw5GYVJNs4SGjN2-6GJxXBzwV_BY4ywU9VG2crSKCj_N-_2Z7ni5ji9RLQ6jVmGb0T6U8jD5rlMSBRajuYfNCIZZic4PsKxFClQttRrL0HEZIfmlut8oxJGjd5dtxeCIUKh-n7Swuw0hs-ppsmNH_Vvonc4_hwQ2zzeezli5thFRW",
+      content: "果凍音效太啵哩啵哩了！聽著特別解壓，根本停不下來！",
+      timeAgo: "1 天前",
+      likes: 24
+    }
+  ],
+  wood: [
+    {
+      id: "comment_4",
+      author: "智力擔當",
+      avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuCYM1WChbAHYMPMMBB6IqLKRh344RuCgtHJQUCoQLBCBKw3yCE-aOsfbtLSEcsVDIbXUerUe4tNiXIbBtFCIOjZZifpxWJLqvQNYEECJIKecLeAWrPdQobwDxhidzAyX0AAEfYEU1nKTWrhBk1BGk5PlNyA9jhCkcjEq_NSLc2eQWtI1W7Onh5Ctnh_hQUbkXEFTEPa_bJwhghbbmaNoOE_tuNtF5sDdWGJLY9Ij7nnuvSHN-OAtuHW0xidpwgSld2kqNciIKzzweNx",
+      content: "最後一關研究了半小時！出來的那一刻真的超有成就感的好不！",
+      timeAgo: "3 天前",
+      likes: 19
+    }
+  ],
+  star: [
+    {
+      id: "comment_5",
+      author: "星空幻想",
+      avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuCIbpPAVJYf9pTccLQsaOk-IYcP5Cu0unzqkpFhbn1boKQwDg66qPyufc0kD-lJ8XqTjxYRgGi18YtwZ02vDhSD3HmVB6XGZO-Iw5GYVJNs4SGjN2-6GJxXBzwV_BY4ywU9VG2crSKCj_N-_2Z7ni5ji9RLQ6jVmGb0T6U8jD5rlMSBRajuYfNCIZZic4PsKxFClQttRrL0HEZIfmlut8oxJGjd5dtxeCIUKh-n7Swuw0hs-ppsmNH_Vvonc4_hwQ2zzeezli5thFRW",
+      content: "連成的圖案居然會動，小狐狸星空圖真漂亮，用來當壁紙非常棒！",
+      timeAgo: "2 天前",
+      likes: 11
+    }
+  ]
+};
+
+export const GAMES_DATA: Game[] = [
+  {
+    id: "jelly",
+    title: "彩色果凍三消",
+    category: "puzzle",
+    categoryName: "益智解謎",
+    tags: ["三消", "熱門"],
+    difficulty: "easy",
+    difficultyName: "簡單",
+    playTime: "short",
+    playTimeName: "5分鐘內 (休閒)",
+    rating: 4.9,
+    timesPlayed: 85200,
+    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCwU66PIfgSh3qj1xmebj9laneyRCaIF_x5XTqc4IqgGEyxmbOIA2mpb8QwJVP7Ls3OGvVS3qVpV0TQvgzGPf_tZgugOHAuIzkDc1jJknBj5RjmgGRqPlxBtFslagbi-30RK28cRxl0t0xei2CLpoY77gNM3R6Tj0gH_yJ0c1T6tuAPp0gmcdnwzMzMR1hed6K0k5JsNBkUTu3W5SlU5_DmZongjEtzu87C0xGRJM3c-3xcAB1qVD5OIuzM-z2YCyQRSljmSwzXLdzv",
+    description: "挑戰靈活腦力，將可愛軟萌的彩色果凍滑動對齊，引爆充滿治癒感的果凍波波特效！",
+    hotness: 92
+  },
+  {
+    id: "wood",
+    title: "木塊推推樂",
+    category: "puzzle",
+    categoryName: "益智解謎",
+    tags: ["邏輯", "舒壓"],
+    difficulty: "medium",
+    difficultyName: "中等",
+    playTime: "medium",
+    playTimeName: "5-15分鐘 (挑戰)",
+    rating: 4.7,
+    timesPlayed: 64100,
+    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDOiPqIf8Z_5CHiPV7H7Ki77iO5EIxh1UMfJhxu332vYRohAF_W0_REBdummqnnpXpZbV37vKcYKS_L_bzit8St1rGRNqWC_1hP8nVo8vcP3EWOVFODwFuMx7BnCt1jUP8ix4suYBU11UDj36GinQWYhWGkphCKFbzpqV9Sz0p5_PelsNsuF1eeFqlm92nWK3BCaFIVPeUhEW4a-CbUg3RvFwfbJBoDDXE3gW4IqoMBcipri6Fu-L2vjLiJak0Guws6HPne5XLW42Xa",
+    description: "在溫暖午後的陽光下，拖動質樸的木製積木拼圖，為關鍵木塊打通出口，既燒腦又舒壓。",
+    hotness: 88
+  },
+  {
+    id: "star",
+    title: "星座連連看",
+    category: "puzzle",
+    categoryName: "益智解謎",
+    tags: ["解謎", "新款"],
+    difficulty: "medium",
+    difficultyName: "中等",
+    playTime: "short",
+    playTimeName: "5分鐘內 (休閒)",
+    rating: 4.8,
+    timesPlayed: 49200,
+    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAJ22gyThHCQE_ovVqvdQNik4mekfsT1ZPq0VgSlx8wMFLHB1_k6LAKPZ1csm4tqd8xqHPtgcn1ztgPYOxrn8uiPdlciEkVVhM9RgCtZiu6cvBammaUUInPLdfsCTPRUUsqjcqFG3qGVxTeGlIywlahcFq5Qs-Don6TknNA3negKiCwDLgEYh3lMxOcWv6iZoJIZXAZ_8DYoWoCGwZKHjammYTbgtN1EjgibyS_vMGd1ItPI_tz7Su9AKdelNsYpJ9Og6OHaXVhJ5fN",
+    description: "在夢幻璀璨的星空之下，將閃亮點點連線，描摹出活靈活現的小兔子和小熊星座，治癒你的心靈。",
+    hotness: 86
+  },
+  {
+    id: "kitty",
+    title: "小貓滾球球",
+    category: "puzzle",
+    categoryName: "益智解謎",
+    tags: ["休閒", "經典"],
+    difficulty: "easy",
+    difficultyName: "簡單",
+    playTime: "medium",
+    playTimeName: "5-15分鐘 (挑戰)",
+    rating: 5.0,
+    timesPlayed: 112000,
+    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAvldgzEElVBy_MZviECM9jQqkR-Bs7NoPu9b3uT3DMYfemiNAtR8UVDHULcnPVjlO13AYms-RT9Vj5g6vO4hfNVMa7h5Q8asUTAEAOvwjYk5GIHlhwGG-YZqbcQGH_x5pPWxQFk1FJtoxTCJRw_KGCn7d-u0N-hbsQXZRahYJzPAHDmMuCDYdYlN4GQuxjuRVCWBX1azkgnGCfgR3bRjKUsgIUSQgSVhu8AODXuMbyFcSs0aC6a7MZD6OORPz7wBNKA-eWj_CxujAZ",
+    description: "超人氣軟萌白貓與色彩斑斕的毛線球相遇！指引毛線滾過錯綜複雜的小迷宮，幫白貓拿到最愛的玩具。",
+    hotness: 94
+  },
+  {
+    id: "shape",
+    title: "形狀實驗室",
+    category: "puzzle",
+    categoryName: "益智解謎",
+    tags: ["教育", "燒腦"],
+    difficulty: "hard",
+    difficultyName: "困難",
+    playTime: "long",
+    playTimeName: "15分鐘以上 (沉浸)",
+    rating: 4.6,
+    timesPlayed: 32800,
+    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCCctV-oJxa7SYwVa6qRq_7ewOCZOmDMICWI8UJidDkJqV4Pwosx-18hI_PsvHCEiqJlU4SDpgCE7AXQLJo9kM_H3fB5p5CYQnP1pTrA46ai5uWBrslVK6XAWQMu10BM4k7AGTa8co9DW4V7Xo_0ZMRQofbXZ1hcNK14UlMnwbGY7KI7VNpkIhSq38NONUxVbJv9z0ML_0ApSVhBKorws0L8-FnzGypZY5RlH8RyeMEqItL3tGeC-BdDFH0-wKJQ_3nIZurs1ze-Ffi",
+    description: "由精緻3D幾何體組成的空間謎題。旋轉與組建多邊立體形狀，釋放奇幻連鎖，挑戰你的空間邏輯！",
+    hotness: 81
+  },
+  {
+    id: "forest",
+    title: "森林捉迷藏",
+    category: "puzzle",
+    categoryName: "益智解謎",
+    tags: ["尋寶", "療癒"],
+    difficulty: "medium",
+    difficultyName: "中等",
+    playTime: "long",
+    playTimeName: "15分鐘以上 (沉浸)",
+    rating: 4.9,
+    timesPlayed: 56900,
+    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCTnO-s43g78H5BN82MccRGkH9jpGhQasN__eVmghhcSmDIT98RkniDHg9f8TwIHKuMLLtczmPiGJMuRNV-FYyCdQ8AhPTKfILVd7BqPh5AJuledWuaigRWEQhBJuexqUYShrYmkovSrCtTdD88gU-1eb8iO6eyd2aYm9etizB0sTnnn5gzbjJF5r9CuyGa-PEgFpj2L7ef_l74Oifi2VFzVvy7ocIAmdBr9g8PQJMAJs42z197OeQ8m8Uadxut-SDprUfOESPPnEZ0",
+    description: "置身於層次分明的紙雕夢幻森林中，睜大雙眼尋找那些與森林背景完美融合的神祕可愛小動物。",
+    hotness: 91
+  },
+  {
+    id: "cafe",
+    title: "小動物咖啡廳",
+    category: "simulation",
+    categoryName: "模擬經營",
+    tags: ["模擬經營", "療癒", "單人遊戲"],
+    difficulty: "easy",
+    difficultyName: "簡單",
+    playTime: "medium",
+    playTimeName: "5-15分鐘 (挑戰)",
+    rating: 4.9,
+    timesPlayed: 118400,
+    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBS84TmphOqbWStZyoOxno59BF9Se1A4CUKxR7NY3V05peGQPy2TzVDm7nsesDt8tRRc5iKD2Y3F-_SztMiXvYNrnYQ-SWQMaiPy_fOIJLfMfjj9S66nFPnbHWHC-7sIxWqXk_RTgUN-03rXtRI0Y3PoycQA2GFsPHB-PTp8wbQJIAqRr02HsyYFw5YrwpnsxFJeYfqwRUYVDjvBO7tfbz7PHEdn9olnTs894u908O0a3lj5YrBdnI26dneoANEDoLhx39BKdttIl5z",
+    description: "招待各式各樣暖萌毛絨的森林小動物。根據牠們的心願，親手沖調咖啡與烘烤可愛杯子麵包甜點，打造溫馨夢幻的森林小店。",
+    hotness: 97
+  },
+  {
+    id: "hamster",
+    title: "倉鼠大進擊：美味種子",
+    category: "simulation",
+    categoryName: "模擬經營",
+    tags: ["經典", "新款"],
+    difficulty: "easy",
+    difficultyName: "簡單",
+    playTime: "medium",
+    playTimeName: "5-15分鐘 (挑戰)",
+    rating: 4.9,
+    timesPlayed: 128490,
+    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCUWZxuQFP0onziQbMyH9K9KNq_DmgS6XMpnNny4XsxNh_2eh_Sv037IQAd4haINamROrjswvwMYTAAvfhx9JOlyZ9MBKQBVL1E_S64tbLrHEzeiOIkk4vL9JQH9jh29hGmI4SSx5LwR_2TiSTzQeWVrStPi2CUORvqFYyleqkpiFYu2Fv2a4cRNgWUgxYIk0k6sIIQjpkAuOhCT5yNZRRiTahg6HV0Rdamgo7sFoK2ANsgJOASVAcqzGFNtFeEYTBeQVewagUEreyc",
+    description: "在陽光明媚的夢幻花園裡，操控活力滿滿的黃金倉鼠，吃掉美味種子，避開貓咪追蹤，解鎖超炫耀的倉鼠小屋！",
+    hotness: 99
+  },
+  {
+    id: "cloud_cat",
+    title: "雲朵貓咪冒險",
+    category: "action",
+    categoryName: "動作冒險",
+    tags: ["益智", "舒壓"],
+    difficulty: "easy",
+    difficultyName: "簡單",
+    playTime: "short",
+    playTimeName: "5分鐘內 (休閒)",
+    rating: 4.8,
+    timesPlayed: 110800,
+    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuA2Rjx_ieUMJEECZcggZpqmX3Bjb7iWOHejEjJ-ZHlX4YMFoMzVNlFAcRmGQx-rzaGAMJMTy7MP9dmTIf82MEkBqjSVJWkaQNnqpaIR_C3fiDYZk9TebkinV9vX_rltvvCYn7JsPelluPub5pxkKgpHhsgB1OkJqlbCXNNBW5dUeaoP5eTu7DwndTkzfm2SN7qYErG0kXhhTC81g5i5xtz6rFmfN1ZuLK7IzszENKCbb0GwFVSNgKCz6oFqkQJ_u5mT5gVTbAfB0js2",
+    description: "一隻夢幻小藍貓在粉嫩天空中踩著軟軟的棉花糖雲朵飛翔，輕巧避開小水滴，展開治癒心靈的無盡飛天挑戰。",
+    hotness: 96
+  },
+  {
+    id: "dream_fox",
+    title: "夢境小狐狸",
+    category: "action",
+    categoryName: "動作冒險",
+    tags: ["冒險", "療癒"],
+    difficulty: "medium",
+    difficultyName: "中等",
+    playTime: "medium",
+    playTimeName: "5-15分鐘 (挑戰)",
+    rating: 4.7,
+    timesPlayed: 98120,
+    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAk2KdStvPvY4nqc0Wz8iwIqHG7uUeJoMcQqRf2VDLtFDz8uJIaa9dv-qM3_u3WMdHzkr6SI2N231HqTlN2MEtbE3VcbMywvLg4AADli6Z8JLXDJ_J28Q-nStZEM6NsmU1dkH_EfD2woBdrQZYItWHYbunYocH09nu46N1zrsgXQ1SZyEe0lxz5rot_bFLYH7D0233rrzCs5JRzIsQFu-6VBUax_Z4Xa5y6N3J1-LxrfumiJ1Xwk2mKIwY8KETUVu7wzFTPDIUOfVHX",
+    description: "小紅狐狸在散發暖光的魔法氣泡中香甜沉睡，在深藍色的寧境夢境中滑動穿梭，避開噩夢，追隨溫馨螢光。",
+    hotness: 93
+  },
+  {
+    id: "cake_puzzle",
+    title: "草莓蛋糕拼拼樂",
+    category: "girls",
+    categoryName: "女生最愛",
+    tags: ["拼圖", "烘焙"],
+    difficulty: "easy",
+    difficultyName: "簡單",
+    playTime: "short",
+    playTimeName: "5分鐘內 (休閒)",
+    rating: 4.9,
+    timesPlayed: 89300,
+    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBMQBBByed7B5JgMTumji_k1l6cZkbBTKcZruRasLfdRt-WRM_yPlLODKQwn-l8G4shATuu9kYCafRQpOVgY5TrweLr7dJYokl5PGW1CX7J7J99E-umSSF_aYrRy8jihrPnJzShdhJl9fzjA133XaZ7SzpBB5ox2pwj-VHpYZCMmspxBTTG3dvKWueAAQPQBqOKaKnFfkFR8o5MFpvDe26H0LY45C1KaEHKaquDBYyjMIs5YgQ6RFN6R_o0AzRLAXhR2X9cBm3Yullb",
+    description: "將香甜誘人的草莓、鮮奶油和軟綿的海綿蛋糕切片完美拼合，解鎖甜美烘培配方！",
+    hotness: 89
+  },
+  {
+    id: "rainy_duck",
+    title: "雨中散步小鴨",
+    category: "action",
+    categoryName: "動作冒險",
+    tags: ["動作", "可爱"],
+    difficulty: "medium",
+    difficultyName: "中等",
+    playTime: "short",
+    playTimeName: "5分鐘內 (休閒)",
+    rating: 4.5,
+    timesPlayed: 76400,
+    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCPGvWkZQT7FdWT7WrbMSzM_XLsrfetEve7dG7K9E-eKsF2DFWp5DsycqMcnz97HTjyD0dq3GiU9anF8zQNW_DEndGYSMRB7wdX2fzAzb_qAxt9j1m69ulg3c3s6A2P0CcXvmb9d3GscI_Ts47rwy_eHusvkh5Pr2myTGUzTnzfwwnIALZy0ICTqYdqE-2A9rOPsJ84cq2M97e_AARqnu3n7cJlM6jIOHxJOX5hJd9lQqTH7CEhMfbpfMQnpOU1uGtN_MDv0Z89NPBb",
+    description: "跟隨穿著亮黃色小雨衣的可愛小鴨，在落滿如水晶般晶瑩剔透雨滴的花園迷宮中漫步，撐傘捕抓亮點。",
+    hotness: 85
+  },
+  {
+    id: "balloon_bunny",
+    title: "氣球兔兔飛行記",
+    category: "casual",
+    categoryName: "休閒時光",
+    tags: ["休閒", "飛行"],
+    difficulty: "easy",
+    difficultyName: "簡單",
+    playTime: "medium",
+    playTimeName: "5-15分鐘 (挑戰)",
+    rating: 4.6,
+    timesPlayed: 62000,
+    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDlWvfmc31YL0OMsJIBWOMawl74CDGE0jesXZqYGu0iOyfZB8_UPufkXlBxKd5MFhFQ62yzPWD2l3Dojv9SZfagXy8f89OeDqpKazUU0l06bl5NryLLClzZB28NpH1IDVlGHKHqTEUvOPtVHxGG1d_8t7tdrvNS2My4VHLDqcT4vMUrw22J2INGntlOAg8vJ02bfGQjuiHy3oGuky9dhb7w9RR6OmyXbhhPpuU1-oZ06vYNrXOdl4oKYCmHCyCD-RAmgpsQ1aD47QcI",
+    description: "抱著繽紛氣球的小兔子，在微風輕拂中跨越一座座夢幻般的彩色果凍山林。",
+    hotness: 78
+  },
+  {
+    id: "bunny_garden",
+    title: "兔兔花園",
+    category: "simulation",
+    categoryName: "模擬經營",
+    tags: ["模擬經營", "園藝"],
+    difficulty: "easy",
+    difficultyName: "簡單",
+    playTime: "medium",
+    playTimeName: "5-15分鐘 (挑戰)",
+    rating: 4.8,
+    timesPlayed: 54000,
+    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDQxIUEwWhAvy9lj2DToHEYSIm3AZLanAsCszB2uUkzvrJ7lGsqx-jpJJVUYIzn7uO3qGv1sf_ufEfhDO-fuqt4pdPpuI9sD_aqOJiNKhQ_zkgotpFO_6Wcaiaa1CN-bFovtjZ35MQXH-Hw7u4Up4lBsbkCSnBIlchwvEfZEUg5yecR8KfhMlmpcmos2oCVy4Uo6x2stwv0-ICreAz2OaMsTonMavmfIuJOvNHhPKjCdCDRpPrsYlKk3jVcqxpiBr2fzWnG_rvFf6Ba",
+    description: "和勤勞的園藝兔兔一起悉心培育五彩巨花。鬆土、灑水、收穫彩虹花露，讓整座山谷開滿萌芽！",
+    hotness: 85
+  },
+  {
+    id: "kitty_bakery",
+    title: "貓咪麵包店",
+    category: "simulation",
+    categoryName: "模擬經營",
+    tags: ["經營", "可愛", "烘焙"],
+    difficulty: "medium",
+    difficultyName: "中等",
+    playTime: "medium",
+    playTimeName: "5-15分鐘 (挑戰)",
+    rating: 4.9,
+    timesPlayed: 72000,
+    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDgMsfAvVobHXlb1fNUrnCHDhtlEeou9x4HUanPs-hKgb2xIvYgjTfZE_6oRkTLtc0zwapXyQ6W54TZBZkbDletUxmfnlfDTKEpMS59OC7tBFONrBbg1QjkxvSqeWTEqQ3zw8IeohceY055QDV-BV33_fqWbeMpaEKCCz_0NEogou0msh78fSd6AnCeQ0jaolmCAmBMLSwYGBzhV8fRODnIaClc42sQpKKW-4v2-o0Qu0PQc6FF8LOS3G97teQvT9wXRl6HwVMXx4sh",
+    description: "新鮮出爐、暖呼呼的貓咪吐司、大甜甜圈！和毛茸茸的貓咪主廚一起打造最具人氣的森林烘焙屋！",
+    hotness: 89
+  },
+  {
+    id: "hamster_camp",
+    title: "倉鼠露營記",
+    category: "simulation",
+    categoryName: "模擬經營",
+    tags: ["養成", "輕鬆", "戶外"],
+    difficulty: "easy",
+    difficultyName: "簡單",
+    playTime: "short",
+    playTimeName: "5分鐘內 (休閒)",
+    rating: 4.7,
+    timesPlayed: 43000,
+    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuA3XuYzljF14aACbh4TKbZkleLBlueuUDcSlcO0ozbB_JwjSdqE8NGGmaATKNxWJVMNpaCeUTD0LHzJ0HbSi5uohjNG17sjgSJY8gpKRuljeVZu13o_1vueROsI7GaFJHBOwlMFHTj1IhvB-CAS7j10NwCSm8bNUJ5oBoTELbmByqnYV6XW2_nqr8hxkItRWIyBvaUbmbygGYIRn-I96ERp8GTyHpDVm92cr4hO4E7QieJFj0SLuxR8jd1-9MQFyA6bK2iy4Me11hDq",
+    description: "在滿天眨眼的星宿之下，為軟萌的倉鼠搭建溫馨印地安小帳篷，圍坐在噼啪作響的微型營火旁唱一首歌吧！",
+    hotness: 82
+  },
+  {
+    id: "bubble_pop",
+    title: "Bubble Pop 繽紛彈珠",
+    category: "casual",
+    categoryName: "休閒時光",
+    tags: ["冒險", "休閒"],
+    difficulty: "easy",
+    difficultyName: "簡單",
+    playTime: "short",
+    playTimeName: "5分鐘內 (休閒)",
+    rating: 4.9,
+    timesPlayed: 92400,
+    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAvldgzEElVBy_MZviECM9jQqkR-Bs7NoPu9b3uT3DMYfemiNAtR8UVDHULcnPVjlO13AYms-RT9Vj5g6vO4hfNVMa7h5Q8asUTAEAOvwjYk5GIHlhwGG-YZqbcQGH_x5pPWxQFk1FJtoxTCJRw_KGCn7d-u0N-hbsQXZRahYJzPAHDmMuCDYdYlN4GQuxjuRVCWBX1azkgnGCfgR3bRjKUsgIUSQgSVhu8AODXuMbyFcSs0aC6a7MZD6OORPz7wBNKA-eWj_CxujAZ",
+    description: "與可愛的小兔子一起挑戰超過 500 個關卡，釋放你的壓力！彈射絢麗繽紛的五彩夢幻水晶球氣泡！",
+    hotness: 90
+  },
+  {
+    id: "puzzle_world",
+    title: "Puzzle World",
+    category: "puzzle",
+    categoryName: "益智解謎",
+    tags: ["益智", "邏輯"],
+    difficulty: "hard",
+    difficultyName: "困難",
+    playTime: "long",
+    playTimeName: "15分鐘以上 (沉浸)",
+    rating: 4.8,
+    timesPlayed: 38200,
+    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAJ22gyThHCQE_ovVqvdQNik4mekfsT1ZPq0VgSlx8wMFLHB1_k6LAKPZ1csm4tqd8xqHPtgcn1ztgPYOxrn8uiPdlciEkVVhM9RgCtZiu6cvBammaUUInPLdfsCTPRUUsqjcqFG3qGVxTeGlIywlahcFq5Qs-Don6TknNA3negKiCwDLgEYh3lMxOcWv6iZoJIZXAZ_8DYoWoCGwZKHjammYTbgtN1EjgibyS_vMGd1ItPI_tz7Su9AKdelNsYpJ9Og6OHaXVhJ5fN",
+    description: "解鎖神奇的水母水晶球和幾何迷宮，在流光溢彩的3D視覺幻境中，解密古老相遇的玄妙滑動石陣。",
+    hotness: 84
+  },
+  {
+    id: "dessert_master",
+    title: "甜點大師",
+    category: "simulation",
+    categoryName: "模擬經營",
+    tags: ["經營", "模擬", "烘焙"],
+    difficulty: "medium",
+    difficultyName: "中等",
+    playTime: "medium",
+    playTimeName: "5-15分鐘 (挑戰)",
+    rating: 4.7,
+    timesPlayed: 28000,
+    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBS84TmphOqbWStZyoOxno59BF9Se1A4CUKxR7NY3V05peGQPy2TzVDm7nsesDt8tRRc5iKD2Y3F-_SztMiXvYNrnYQ-SWQMaiPy_fOIJLfMfjj9S66nFPnbHWHC-7sIxWqXk_RTgUN-03rXtRI0Y3PoycQA2GFsPHB-PTp8wbQJIAqRr02HsyYFw5YrwpnsxFJeYfqwRUYVDjvBO7tfbz7PHEdn9olnTs894u908O0a3lj5YrBdnI26dneoANEDoLhx39BKdttIl5z",
+    description: "製作最夢幻的粉嫩彩虹蛋糕！挑選頂級奶油、精緻馬卡龍和可食用精靈小碎花，配出頂級美夢甜點。",
+    hotness: 80
+  },
+  {
+    id: "pet_home",
+    title: "寵物家園",
+    category: "simulation",
+    categoryName: "模擬經營",
+    tags: ["養成", "溫馨", "寵物"],
+    difficulty: "easy",
+    difficultyName: "簡單",
+    playTime: "long",
+    playTimeName: "15分鐘以上 (沉浸)",
+    rating: 4.9,
+    timesPlayed: 61000,
+    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAvldgzEElVBy_MZviECM9jQqkR-Bs7NoPu9b3uT3DMYfemiNAtR8UVDHULcnPVjlO13AYms-RT9Vj5g6vO4hfNVMa7h5Q8asUTAEAOvwjYk5GIHlhwGG-YZqbcQGH_x5pPWxQFk1FJtoxTCJRw_KGCn7d-u0N-hbsQXZRahYJzPAHDmMuCDYdYlN4GQuxjuRVCWBX1azkgnGCfgR3bRjKUsgIUSQgSVhu8AODXuMbyFcSs0aC6a7MZD6OORPz7wBNKA-eWj_CxujAZ",
+    description: "打造溫馨舒適的流浪貓貓狗狗窩。購買鬆軟棉花糖窩、逗貓棒和美味罐罐，和一屋子撒嬌打滾的毛茸茸們親密互動！",
+    hotness: 87
+  }
+];
+
+export const OTHER_LEADERBOARD: { rank: number; title: string; hotness: number; icon: string; bgClass: string; iconClass: string; category: string }[] = [
+  { rank: 7, title: "森林小餐廳", hotness: 72, icon: "restaurant", bgClass: "bg-[#a7f3d0]/30", iconClass: "text-[#1b6b4f]", category: "美食" },
+  { rank: 8, title: "色塊塗鴉趣", hotness: 65, icon: "brush", bgClass: "bg-[#fdd0ea]/30", iconClass: "text-[#765469]", category: "藝術" },
+  { rank: 9, title: "音樂泡泡龍", hotness: 61, icon: "music_note", bgClass: "bg-[#f3e580]/30", iconClass: "text-[#695f02]", category: "音樂" },
+  { rank: 10, title: "可愛寵物屋", hotness: 58, icon: "pets", bgClass: "bg-[#e1e3e4]/30", iconClass: "text-[#6f7973]", category: "養成" }
+];

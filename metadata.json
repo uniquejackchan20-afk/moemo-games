@@ -1,0 +1,6 @@
+{
+  "name": "萌萌小遊戲",
+  "description": "最可愛的線上遊戲天堂！提供各式療癒系益智解謎、養成經營和小動物遊戲，讓每一天都充滿溫馨與可愛能量。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
