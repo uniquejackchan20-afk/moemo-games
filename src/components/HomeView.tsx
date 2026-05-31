@@ -22,13 +22,13 @@ export default function HomeView({
 }: HomeViewProps) {
   const [isPending, startTransition] = useTransition();
 
-  // Filter 6 puzzle items specifically for Screen 1 section: "益智類遊戲"
-  const puzzleGames = GAMES_DATA.filter(g => g.category === 'puzzle').slice(0, 6);
+  // Filter puzzle items specifically for Section: "益智類遊戲"
+  const puzzleGames = GAMES_DATA.filter(g => g.category === 'puzzle');
 
-  // Suggested item rows
-  const recommendedBig = GAMES_DATA.find(g => g.id === 'bubble_pop') || GAMES_DATA[0];
-  const recommendedSm1 = GAMES_DATA.find(g => g.id === 'puzzle_world') || GAMES_DATA[1];
-  const recommendedSm2 = GAMES_DATA.find(g => g.id === 'dessert_master') || GAMES_DATA[2];
+  // Suggested item rows mapped to developed games
+  const recommendedBig = GAMES_DATA.find(g => g.id === 'cafe') || GAMES_DATA[0];
+  const recommendedSm1 = GAMES_DATA.find(g => g.id === 'jelly') || GAMES_DATA[1];
+  const recommendedSm2 = GAMES_DATA.find(g => g.id === 'wood') || GAMES_DATA[2];
 
   // Random Recommendation Picker
   const handleRandomPlay = () => {
@@ -94,57 +94,31 @@ export default function HomeView({
           <span className="material-symbols-outlined text-primary text-[20px]">grid_view</span>
           熱門分類
         </h3>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           
           <button
-            onClick={() => onSelectCategory('action')}
-            className="marshmallow-button flex items-center gap-4 bg-[#a7f3d0]/30 hover:bg-[#a7f3d0]/40 border-b-2 border-[#1b6b4f]/10 p-5 rounded-2xl cursor-pointer text-left"
-          >
-            <div className="bg-[#a7f3d0] p-3 rounded-xl text-teal-800">
-              <Zap className="w-5 h-5 fill-teal-800" />
-            </div>
-            <div>
-              <h4 className="font-bold text-xs text-teal-900">動作冒險</h4>
-              <p className="text-[10px] text-teal-700 font-medium">跳躍、躲避與大探險</p>
-            </div>
-          </button>
-
-          <button
             onClick={() => onSelectCategory('puzzle')}
-            className="marshmallow-button flex items-center gap-4 bg-[#fdd0ea]/30 hover:bg-[#fdd0ea]/40 border-b-2 border-[#765469]/10 p-5 rounded-2xl cursor-pointer text-left"
+            className="marshmallow-button flex items-center gap-4 bg-[#fdd0ea]/35 hover:bg-[#fdd0ea]/50 border-b-2 border-[#765469]/10 p-5 rounded-2xl cursor-pointer text-left transition-colors duration-200"
           >
-            <div className="bg-pink-100 p-3 rounded-xl text-pink-700">
+            <div className="bg-pink-100 p-3 rounded-xl text-pink-700 shadow-sm">
               <Puzzle className="w-5 h-5 fill-pink-700" />
             </div>
             <div>
-              <h4 className="font-bold text-xs text-pink-900">經典益智</h4>
-              <p className="text-[10px] text-pink-700 font-medium">連線、推木板與思考力</p>
+              <h4 className="font-sans font-bold text-xs text-pink-900">經典益智</h4>
+              <p className="text-[10px] text-pink-700 font-medium">連線、推木板與思考力挑戰</p>
             </div>
           </button>
 
           <button
-            onClick={() => onSelectCategory('girls')}
-            className="marshmallow-button flex items-center gap-4 bg-[#f3e580]/30 hover:bg-[#f3e580]/40 border-b-2 border-[#695f02]/10 p-5 rounded-2xl cursor-pointer text-left"
+            onClick={() => onSelectCategory('simulation')}
+            className="marshmallow-button flex items-center gap-4 bg-[#a7f3d0]/35 hover:bg-[#a7f3d0]/50 border-b-2 border-[#1b6b4f]/10 p-5 rounded-2xl cursor-pointer text-left transition-colors duration-200"
           >
-            <div className="bg-yellow-100 p-3 rounded-xl text-yellow-700">
-              <Heart className="w-5 h-5 fill-yellow-700" />
+            <div className="bg-[#a7f3d0] p-3 rounded-xl text-teal-800 shadow-sm">
+              <Coffee className="w-5 h-5 text-teal-800" />
             </div>
             <div>
-              <h4 className="font-bold text-xs text-yellow-900">女生最愛</h4>
-              <p className="text-[10px] text-yellow-700 font-medium">換裝、美味烤蛋糕樂園</p>
-            </div>
-          </button>
-
-          <button
-            onClick={() => onSelectCategory('casual')}
-            className="marshmallow-button flex items-center gap-4 bg-gray-100/60 hover:bg-gray-200/50 border-b-2 border-gray-300/10 p-5 rounded-2xl cursor-pointer text-left"
-          >
-            <div className="bg-gray-200 p-3 rounded-xl text-gray-700">
-              <Coffee className="w-5 h-5" />
-            </div>
-            <div>
-              <h4 className="font-bold text-xs text-gray-900">休閒時光</h4>
-              <p className="text-[10px] text-gray-700 font-medium">泡泡龍與簡單單人遊戲</p>
+              <h4 className="font-sans font-bold text-xs text-teal-900">經營模擬</h4>
+              <p className="text-[10px] text-teal-700 font-medium font-sans">小動物咖啡廳與悠閒下午茶</p>
             </div>
           </button>
 

@@ -21,9 +21,6 @@ const CATEGORIES = [
   { id: 'all', name: '全部遊戲' },
   { id: 'puzzle', name: '益智解謎' },
   { id: 'simulation', name: '模擬經營' },
-  { id: 'action', name: '動作冒險' },
-  { id: 'girls', name: '女生最愛' },
-  { id: 'casual', name: '休閒時光' },
 ];
 
 export default function CategoryView({

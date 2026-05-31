@@ -9,6 +9,7 @@ import { GAMES_DATA, INITIAL_COMMENTS } from '../data';
 import MiniGameCafe from './MiniGameCafe';
 import MiniGameJelly from './MiniGameJelly';
 import MiniGameWood from './MiniGameWood';
+import MiniGameSnake from './MiniGameSnake';
 import { Heart, Star, Send, Share2, Play, ChevronRight, Gamepad2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
@@ -141,9 +142,10 @@ export default function GameDetailView({
               {game.id === 'cafe' && <MiniGameCafe />}
               {game.id === 'jelly' && <MiniGameJelly />}
               {game.id === 'wood' && <MiniGameWood />}
+              {game.id === 'snake' && <MiniGameSnake />}
               
               {/* Fallback games display for non-playable cards */}
-              {game.id !== 'cafe' && game.id !== 'jelly' && game.id !== 'wood' && (
+              {game.id !== 'cafe' && game.id !== 'jelly' && game.id !== 'wood' && game.id !== 'snake' && (
                 <div className="p-8 text-center flex flex-col items-center justify-center min-h-[360px] max-w-lg mx-auto bg-white rounded-3xl border-4 border-teal-50 my-4 shadow-md">
                   <div className="bg-[#a7f3d0] p-4 rounded-full text-[#1b6b4f] mb-4 animate-bounce">
                     <Gamepad2 className="w-10 h-10" />
@@ -196,6 +198,12 @@ export default function GameDetailView({
                     <li>• 1: 點擊選中被困在棋盤中的木條。</li>
                     <li>• 2: 點擊下方操控按鍵可以相應滑移。</li>
                     <li>• 3: 清出障礙放行 🔑 金色木塊使其達到最右出口！</li>
+                  </>
+                ) : game.id === 'snake' ? (
+                  <>
+                    <li>• 1: 控制萌趣小蛇穿游，在草地上探索冒險。</li>
+                    <li>• 2: 吞食美味的水果（草莓、巨桃、葡萄、星星）以賺取積分與生長蛇節。</li>
+                    <li>• 3: 避開咬擊到自己的身體，解鎖更多華麗精美的特色小蛇外觀！</li>
                   </>
                 ) : (
                   <>
