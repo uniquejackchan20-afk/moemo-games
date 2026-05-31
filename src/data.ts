@@ -115,6 +115,42 @@ export const INITIAL_COMMENTS: Record<string, Comment[]> = {
       timeAgo: "15 分鐘前",
       likes: 9
     }
+  ],
+  rockpaperscissors: [
+    {
+      id: "comment_rps_1",
+      author: "森林守護者",
+      avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuCIbpPAVJYf9pTccLQsaOk-IYcP5Cu0unzqkpFhbn1boKQwDg66qPyufc0kD-lJ8XqTjxYRgGi18YtwZ02vDhSD3HmVB6XGZO-Iw5GYVJNs4SGjN2-6GJxXBzwV_BY4ywU9VG2crSKCj_N-_2Z7ni5ji9RLQ6jVmGb0T6U8jD5rlMSBRajuYfNCIZZic4PsKxFClQttRrL0HEZIfmlut8oxJGjd5dtxeCIUKh-n7Swuw0hs-ppsmNH_Vvonc4_hwQ2zzeezli5thFRW",
+      content: "小熊和松鼠的表情真的超級可愛！還可以積攢怒氣釋放萌物必殺技（超級剪刀石頭布），真的太好玩了！",
+      timeAgo: "3 分鐘前",
+      likes: 6
+    },
+    {
+      id: "comment_rps_2",
+      author: "猜拳王123",
+      avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuCYM1WChbAHYMPMMBB6IqLKRh344RuCgtHJQUCoQLBCBKw3yCE-aOsfbtLSEcsVDIbXUerUe4tNiXIbBtFCIOjZZifpxWJLqvQNYEECJIKecLeAWrPdQobwDxhidzAyX0AAEfYEU1nKTWrhBk1BGk5PlNyA9jhCkcjEq_NSLc2eQWtI1W7Onh5Ctnh_hQUbkXEFTEPa_bJwhghbbmaNoOE_tuNtF5sDdWGJLY9Ij7nnuvSHN-OAtuHW0xidpwgSld2kqNciIKzzweNx",
+      content: "我最喜歡它的「瘋狂預判模式」和「奇術卡牌玩法」，不單純是看運氣，還能用各類趣味道具與絕招來扭轉局勢，設計得太精緻了！",
+      timeAgo: "22 分鐘前",
+      likes: 11
+    }
+  ],
+  tetris: [
+    {
+      id: "comment_tetris_1",
+      author: "糖果盒小專家",
+      avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuCIbpPAVJYf9pTccLQsaOk-IYcP5Cu0unzqkpFhbn1boKQwDg66qPyufc0kD-lJ8XqTjxYRgGi18YtwZ02vDhSD3HmVB6XGZO-Iw5GYVJNs4SGjN2-6GJxXBzwV_BY4ywU9VG2crSKCj_N-_2Z7ni5ji9RLQ6jVmGb0T6U8jD5rlMSBRajuYfNCIZZic4PsKxFClQttRrL0HEZIfmlut8oxJGjd5dtxeCIUKh-n7Swuw0hs-ppsmNH_Vvonc4_hwQ2zzeezli5thFRW",
+      content: "天哪，果凍積木消掉的時候竟然有特別好玩的QQ彈性特效！還有背景小熊巴魯的搞笑小台詞，太萌了！",
+      timeAgo: "5 分鐘前",
+      likes: 14
+    },
+    {
+      id: "comment_tetris_2",
+      author: "俄羅斯方塊大師",
+      avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuCYM1WChbAHYMPMMBB6IqLKRh344RuCgtHJQUCoQLBCBKw3yCE-aOsfbtLSEcsVDIbXUerUe4tNiXIbBtFCIOjZZifpxWJLqvQNYEECJIKecLeAWrPdQobwDxhidzAyX0AAEfYEU1nKTWrhBk1BGk5PlNyA9jhCkcjEq_NSLc2eQWtI1W7Onh5Ctnh_hQUbkXEFTEPa_bJwhghbbmaNoOE_tuNtF5sDdWGJLY9Ij7nnuvSHN-OAtuHW0xidpwgSld2kqNciIKzzweNx",
+      content: "果凍效果做得非常到位，音樂特別愉快，居然含有難度遞增的萌態特訓、無盡佛系和限時速消三種自訂規則，強烈推薦！",
+      timeAgo: "1 小時前",
+      likes: 21
+    }
   ]
 };
 
@@ -230,6 +266,38 @@ export const GAMES_DATA: Game[] = [
     image: "/src/assets/images/tictactoe_cover_1780235758823.png",
     description: "軟萌的小貓和小狗在柔軟的地毯上開啟了爪爪棋對抗！放下香黏貓爪和汪汪骨頭，與超群的智慧AI或好友同屏度過快樂時光。",
     hotness: 94
+  },
+  {
+    id: "rockpaperscissors",
+    title: "盟寵森友猜猜拳",
+    category: "puzzle",
+    categoryName: "益智解謎",
+    tags: ["猜拳", "策略", "療癒"],
+    difficulty: "easy",
+    difficultyName: "簡單",
+    playTime: "short",
+    playTimeName: "5分鐘內 (休閒)",
+    rating: 4.9,
+    timesPlayed: 18400,
+    image: "/src/assets/images/rps_bear_cover_1780236377965.png",
+    description: "在陽光斑駁的童話森林中，和小熊巴魯、松鼠皮皮開啟奇妙的萌趣猜拳爭霸！體驗經典的剪刀石頭布之外，還能解鎖神祕道具、怒氣必殺技能與卡牌奇術模式！",
+    hotness: 95
+  },
+  {
+    id: "tetris",
+    title: "萌熊果凍積木盒",
+    category: "puzzle",
+    categoryName: "益智解謎",
+    tags: ["拼圖", "敏捷", "療癒"],
+    difficulty: "easy",
+    difficultyName: "簡單",
+    playTime: "medium",
+    playTimeName: "5-15分鐘 (挑戰)",
+    rating: 4.9,
+    timesPlayed: 38200,
+    image: "/src/assets/images/tetris_bear_cover_1780242039147.png",
+    description: "和小熊巴魯一塊把五彩繽紛、QQ彈彈的糖果果凍積木完美拼入保鮮盒中吧！挑戰經典、阻礙、和限時速消玩法，體驗滿屏果凍消除時的極致解壓快感！",
+    hotness: 96
   }
 ];
 

@@ -13,6 +13,8 @@ import MiniGameSnake from './MiniGameSnake';
 import MiniGameSoduku from './MiniGameSoduku';
 import MiniGameMinesweeper from './MiniGameMinesweeper';
 import MiniGameTicTacToe from './MiniGameTicTacToe';
+import MiniGameRockPaperScissors from './MiniGameRockPaperScissors';
+import MiniGameTetris from './MiniGameTetris';
 import { Heart, Star, Send, Share2, Play, ChevronRight, Gamepad2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
@@ -141,9 +143,11 @@ export default function GameDetailView({
               {game.id === 'sudoku' && <MiniGameSoduku />}
               {game.id === 'minesweeper' && <MiniGameMinesweeper />}
               {game.id === 'tictactoe' && <MiniGameTicTacToe />}
+              {game.id === 'rockpaperscissors' && <MiniGameRockPaperScissors />}
+              {game.id === 'tetris' && <MiniGameTetris />}
               
               {/* Fallback games display for non-playable cards */}
-              {game.id !== 'cafe' && game.id !== 'jelly' && game.id !== 'wood' && game.id !== 'snake' && game.id !== 'sudoku' && game.id !== 'minesweeper' && game.id !== 'tictactoe' && (
+              {game.id !== 'cafe' && game.id !== 'jelly' && game.id !== 'wood' && game.id !== 'snake' && game.id !== 'sudoku' && game.id !== 'minesweeper' && game.id !== 'tictactoe' && game.id !== 'rockpaperscissors' && game.id !== 'tetris' && (
                 <div className="p-8 text-center flex flex-col items-center justify-center min-h-[360px] max-w-lg mx-auto bg-white rounded-3xl border-4 border-teal-50 my-4 shadow-md">
                   <div className="bg-[#a7f3d0] p-4 rounded-full text-[#1b6b4f] mb-4 animate-bounce">
                     <Gamepad2 className="w-10 h-10" />
@@ -221,6 +225,18 @@ export default function GameDetailView({
                     <li>• 2: 對手（AI 白汪汪 🐶 或您的親密好友）會輪流印上骨頭印記 🦴。</li>
                     <li>• 3: 最先在任意橫向、縱向或斜向對角線端將連續三個標記連成一條線即獲勝！</li>
                   </>
+                ) : game.id === 'rockpaperscissors' ? (
+                  <>
+                    <li>• 1: 點擊出招按鈕選擇「石頭 ✊」、「布布 ✋」或「剪刀 ✌️」。</li>
+                    <li>• 2: 敗北時能凝聚更高怒氣 💥。怒氣滿 100% 可引導「狂暴巨熊拳」，大捷時爆發 2 倍積分！</li>
+                    <li>• 3: 巧用天眼預知卡 🔮、橡樹護盾卡 🛡️ 等森林奇術巧妙阻擊松鼠皮皮，搶先達到 5 分即可贏得松果桂冠！</li>
+                  </>
+                ) : game.id === 'tetris' ? (
+                  <>
+                    <li>• 1: 使用螢幕按鍵或鍵盤方向鍵控制繽紛果凍積木，並拼入小保鮮盒中。</li>
+                    <li>• 2: 連續拼滿整行將會觸發 QQ 彈性感消行特效，並給予大額糖果積分！</li>
+                    <li>• 3: 體驗頑固巨石阻礙特訓或 120 秒計時速消，解鎖頂級保鮮冠冕！</li>
+                  </>
                 ) : (
                   <>
                     <li>• 1: 通過可愛的美工與舒緩背景琴曲享受休閒。</li>
@@ -252,6 +268,16 @@ export default function GameDetailView({
                   <>
                     <p>• <span className="font-bold text-gray-700">雙模式自由行：</span> 支持 <strong>機智AI對抗</strong> 與 <strong>雙人同樂對策</strong>。您可以單獨與不同難度等級的機器汪對陣，或與小夥伴同屏輪流下棋！</p>
                     <p>• <span className="font-bold text-gray-700">不敗汪王智力：</span> 頂級的「汪王 👑」智力搭載了強大的 <strong>Minimax 決策演算法</strong>，算無遺策，等著你來挑戰平局！</p>
+                  </>
+                ) : game.id === 'rockpaperscissors' ? (
+                  <>
+                    <p>• <span className="font-bold text-gray-700">卡牌魔法戰：</span> 擁有三款精緻的 <strong>山林道具卡牌</strong> ── 「天眼預知」、「橡樹護盾」、「雷霆增益」，每局限點按使用三次，助您扭轉乾坤！</p>
+                    <p>• <span className="font-bold text-gray-700">連勝咆哮：</span> 每次猜拳攻守皆能蓄積小萌獸怒氣，100% 怒氣極限下可啟動 <strong>狂暴巨熊拳</strong>，給松鼠皮皮致命一擊！</p>
+                  </>
+                ) : game.id === 'tetris' ? (
+                  <>
+                    <p>• <span className="font-bold text-gray-700">鍵盤快速操控：</span> 電腦端支持鍵盤 <strong>A/D / 左右方向鍵</strong> 調整平移、<strong>W / 上鍵</strong> 快速翻轉、<strong>S / 下鍵</strong> 加速下落、<strong>空白鍵</strong> 瞬降。</p>
+                    <p>• <span className="font-bold text-gray-700">萌態大特訓：</span> 可隨心開啟經典消消樂 🎨，頑石關 ⛰️ 與 120 秒計時速消 ⏰，支持音效快速靜音。</p>
                   </>
                 ) : (
                   <>
