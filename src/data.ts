@@ -79,6 +79,24 @@ export const INITIAL_COMMENTS: Record<string, Comment[]> = {
       timeAgo: "2 小時前",
       likes: 4
     }
+  ],
+  minesweeper: [
+    {
+      id: "comment_minesweeper_1",
+      author: "胡蘿蔔狂熱粉",
+      avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuCIbpPAVJYf9pTccLQsaOk-IYcP5Cu0unzqkpFhbn1boKQwDg66qPyufc0kD-lJ8XqTjxYRgGi18YtwZ02vDhSD3HmVB6XGZO-Iw5GYVJNs4SGjN2-6GJxXBzwV_BY4ywU9VG2crSKCj_N-_2Z7ni5ji9RLQ6jVmGb0T6U8jD5rlMSBRajuYfNCIZZic4PsKxFClQttRrL0HEZIfmlut8oxJGjd5dtxeCIUKh-n7Swuw0hs-ppsmNH_Vvonc4_hwQ2zzeezli5thFRW",
+      content: "天哪，萌兔朵朵戴著帽子太可愛了，失誤或者是踩到地鼠時候的無辜表情真讓人忍俊不禁！",
+      timeAgo: "10 分鐘前",
+      likes: 8
+    },
+    {
+      id: "comment_minesweeper_2",
+      author: "花園漫步者",
+      avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuCYM1WChbAHYMPMMBB6IqLKRh344RuCgtHJQUCoQLBCBKw3yCE-aOsfbtLSEcsVDIbXUerUe4tNiXIbBtFCIOjZZifpxWJLqvQNYEECJIKecLeAWrPdQobwDxhidzAyX0AAEfYEU1nKTWrhBk1BGk5PlNyA9jhCkcjEq_NSLc2eQWtI1W7Onh5Ctnh_hQUbkXEFTEPa_bJwhghbbmaNoOE_tuNtF5sDdWGJLY9Ij7nnuvSHN-OAtuHW0xidpwgSld2kqNciIKzzweNx",
+      content: "玩起來非常舒服！安全區會長出可愛的小草芽和蘿蔔葉 🌱，不愧是高精緻度的療癒系踩地雷，第一次玩到這麼有溫度且反饋十足的玩法！",
+      timeAgo: "45 分鐘前",
+      likes: 12
+    }
   ]
 };
 
@@ -162,6 +180,22 @@ export const GAMES_DATA: Game[] = [
     image: "/src/assets/images/sudoku_cover_1780231940664.png",
     description: "與森林奇妙萌寵一起開動腦筋！在木香悠遠的九宮格魔法盤上，填寫彩色數字並解密療癒的益智數獨謎題。",
     hotness: 91
+  },
+  {
+    id: "minesweeper",
+    title: "萌兔胡蘿蔔探險",
+    category: "puzzle",
+    categoryName: "益智解謎",
+    tags: ["邏輯", "益智", "療癒"],
+    difficulty: "easy",
+    difficultyName: "簡單",
+    playTime: "medium",
+    playTimeName: "5-10分鐘 (休閒)",
+    rating: 4.9,
+    timesPlayed: 32600,
+    image: "/src/assets/images/minesweeper_bunny_cover_1780233195871.png",
+    description: "陪膽小溫順的萌兔朵朵一起在陽光花園拔胡蘿蔔！仔細辨認土壤泥巴處的周圍警告數字，佈置安全防風罩繞開頑皮地鼠。",
+    hotness: 93
   }
 ];
 

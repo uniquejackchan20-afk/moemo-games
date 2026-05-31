@@ -11,6 +11,7 @@ import MiniGameJelly from './MiniGameJelly';
 import MiniGameWood from './MiniGameWood';
 import MiniGameSnake from './MiniGameSnake';
 import MiniGameSoduku from './MiniGameSoduku';
+import MiniGameMinesweeper from './MiniGameMinesweeper';
 import { Heart, Star, Send, Share2, Play, ChevronRight, Gamepad2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
@@ -145,9 +146,10 @@ export default function GameDetailView({
               {game.id === 'wood' && <MiniGameWood />}
               {game.id === 'snake' && <MiniGameSnake />}
               {game.id === 'sudoku' && <MiniGameSoduku />}
+              {game.id === 'minesweeper' && <MiniGameMinesweeper />}
               
               {/* Fallback games display for non-playable cards */}
-              {game.id !== 'cafe' && game.id !== 'jelly' && game.id !== 'wood' && game.id !== 'snake' && game.id !== 'sudoku' && (
+              {game.id !== 'cafe' && game.id !== 'jelly' && game.id !== 'wood' && game.id !== 'snake' && game.id !== 'sudoku' && game.id !== 'minesweeper' && (
                 <div className="p-8 text-center flex flex-col items-center justify-center min-h-[360px] max-w-lg mx-auto bg-white rounded-3xl border-4 border-teal-50 my-4 shadow-md">
                   <div className="bg-[#a7f3d0] p-4 rounded-full text-[#1b6b4f] mb-4 animate-bounce">
                     <Gamepad2 className="w-10 h-10" />
@@ -213,6 +215,12 @@ export default function GameDetailView({
                     <li>• 2: 點擊下方 1–9 數字鍵盤填值，或啟用「草稿筆記」記錄候選數字。</li>
                     <li>• 3: 完成橫排、豎列與 3x3 各格且數字皆不重疊即可獲勝！</li>
                   </>
+                ) : game.id === 'minesweeper' ? (
+                  <>
+                    <li>• 1: 點開格子來收集安全的胡蘿蔔，避免驚醒小地鼠。</li>
+                    <li>• 2: 根據格子中浮現出的提示數字，在推導為地鼠的格子上按右鍵進行「防護標記 🚩」。</li>
+                    <li>• 3: 將所有安全格子點開且全部地鼠都防護完畢即可贏得大豐收！</li>
+                  </>
                 ) : (
                   <>
                     <li>• 1: 通過可愛的美工與舒緩背景琴曲享受休閒。</li>
@@ -234,6 +242,11 @@ export default function GameDetailView({
                   <>
                     <p>• <span className="font-bold text-gray-700">鍵盤快速控制：</span> 支持鍵盤 <strong>1-9</strong> 數字填空、<strong>Backspace/Delete</strong> 擦拭，以及 <strong>方向鍵</strong> 移動選擇。</p>
                     <p>• <span className="font-bold text-gray-750">手稿切換：</span> 按字母鍵 <strong>N</strong> 可以一鍵切換鉛筆記備註狀態噢。</p>
+                  </>
+                ) : game.id === 'minesweeper' ? (
+                  <>
+                    <p>• <span className="font-bold text-gray-700">防護與插旗：</span> 電腦端用戶按 <strong>滑鼠右鍵</strong> 可插旗標記地鼠 🚩，行動端用戶 <strong>長按</strong> 相同位置具有相同效果。</p>
+                    <p>• <span className="font-bold text-gray-700">金鐘罩首點：</span> 獨創安全優化，您的 <strong>第一次點擊</strong> 絕不會是地鼠，且周圍必為安全坦途！</p>
                   </>
                 ) : (
                   <>
