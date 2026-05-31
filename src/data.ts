@@ -97,6 +97,24 @@ export const INITIAL_COMMENTS: Record<string, Comment[]> = {
       timeAgo: "45 分鐘前",
       likes: 12
     }
+  ],
+  tictactoe: [
+    {
+      id: "comment_tictactoe_1",
+      author: "肉墊收藏家",
+      avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuCIbpPAVJYf9pTccLQsaOk-IYcP5Cu0unzqkpFhbn1boKQwDg66qPyufc0kD-lJ8XqTjxYRgGi18YtwZ02vDhSD3HmVB6XGZO-Iw5GYVJNs4SGjN2-6GJxXBzwV_BY4ywU9VG2crSKCj_N-_2Z7ni5ji9RLQ6jVmGb0T6U8jD5rlMSBRajuYfNCIZZic4PsKxFClQttRrL0HEZIfmlut8oxJGjd5dtxeCIUKh-n7Swuw0hs-ppsmNH_Vvonc4_hwQ2zzeezli5thFRW",
+      content: "天哪！肉墊棋子真的太融化了！每次落子還有貓叫狗吠的音效，和AI對戰還會不服輸，太療癒了吧！",
+      timeAgo: "2 分鐘前",
+      likes: 5
+    },
+    {
+      id: "comment_tictactoe_2",
+      author: "棋藝界喵星人",
+      avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuCYM1WChbAHYMPMMBB6IqLKRh344RuCgtHJQUCoQLBCBKw3yCE-aOsfbtLSEcsVDIbXUerUe4tNiXIbBtFCIOjZZifpxWJLqvQNYEECJIKecLeAWrPdQobwDxhidzAyX0AAEfYEU1nKTWrhBk1BGk5PlNyA9jhCkcjEq_NSLc2eQWtI1W7Onh5Ctnh_hQUbkXEFTEPa_bJwhghbbmaNoOE_tuNtF5sDdWGJLY9Ij7nnuvSHN-OAtuHW0xidpwgSld2kqNciIKzzweNx",
+      content: "有雙人同屏對戰和智慧人機對戰兩種模式可選。聰明難度非常有挑戰性！介面繪畫風格簡直就是為我量身打造的！",
+      timeAgo: "15 分鐘前",
+      likes: 9
+    }
   ]
 };
 
@@ -196,6 +214,22 @@ export const GAMES_DATA: Game[] = [
     image: "/src/assets/images/minesweeper_bunny_cover_1780233195871.png",
     description: "陪膽小溫順的萌兔朵朵一起在陽光花園拔胡蘿蔔！仔細辨認土壤泥巴處的周圍警告數字，佈置安全防風罩繞開頑皮地鼠。",
     hotness: 93
+  },
+  {
+    id: "tictactoe",
+    title: "萌喵汪汪爪爪棋",
+    category: "puzzle",
+    categoryName: "益智解謎",
+    tags: ["邏輯", "對決", "療癒"],
+    difficulty: "easy",
+    difficultyName: "簡單",
+    playTime: "short",
+    playTimeName: "5分鐘內 (休閒)",
+    rating: 4.9,
+    timesPlayed: 25100,
+    image: "/src/assets/images/tictactoe_cover_1780235758823.png",
+    description: "軟萌的小貓和小狗在柔軟的地毯上開啟了爪爪棋對抗！放下香黏貓爪和汪汪骨頭，與超群的智慧AI或好友同屏度過快樂時光。",
+    hotness: 94
   }
 ];
 

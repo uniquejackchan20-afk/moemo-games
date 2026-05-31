@@ -12,6 +12,7 @@ import MiniGameWood from './MiniGameWood';
 import MiniGameSnake from './MiniGameSnake';
 import MiniGameSoduku from './MiniGameSoduku';
 import MiniGameMinesweeper from './MiniGameMinesweeper';
+import MiniGameTicTacToe from './MiniGameTicTacToe';
 import { Heart, Star, Send, Share2, Play, ChevronRight, Gamepad2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
@@ -23,11 +24,6 @@ interface GameDetailViewProps {
   loggedInUser: { username: string; avatarUrl: string } | null;
 }
 
-const SIDEBAR_GAMES = [
-  { id: 'bunny_garden', title: '兔兔花園', rating: 4.8, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDQxIUEwWhAvy9lj2DToHEYSIm3AZLanAsCszB2uUkzvrJ7lGsqx-jpJJVUYIzn7uO3qGv1sf_ufEfhDO-fuqt4pdPpuI9sD_aqOJiNKhQ_zkgotpFO_6Wcaiaa1CN-bFovtjZ35MQXH-Hw7u4Up4lBsbkCSnBIlchwvEfZEUg5yecR8KfhMlmpcmos2oCVy4Uo6x2stwv0-ICreAz2OaMsTonMavmfIuJOvNHhPKjCdCDRpPrsYlKk3jVcqxpiBr2fzWnG_rvFf6Ba' },
-  { id: 'kitty_bakery', title: '貓咪麵包店', rating: 4.9, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDgMsfAvVobHXlb1fNUrnCHDhtlEeou9x4HUanPs-hKgb2xIvYgjTfZE_6oRkTLtc0zwapXyQ6W54TZBZkbDletUxmfnlfDTKEpMS59OC7tBFONrBbg1QjkxvSqeWTEqQ3zw8IeohceY055QDV-BV33_fqWbeMpaEKCCz_0NEogou0msh78fSd6AnCeQ0jaolmCAmBMLSwYGBzhV8fRODnIaClc42sQpKKW-4v2-o0Qu0PQc6FF8LOS3G97teQvT9wXRl6HwVMXx4sh' },
-  { id: 'hamster_camp', title: '倉鼠露營記', rating: 4.7, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA3XuYzljF14aACbh4TKbZkleLBlueuUDcSlcO0ozbB_JwjSdqE8NGGmaATKNxWJVMNpaCeUTD0LHzJ0HbSi5uohjNG17sjgSJY8gpKRuljeVZu13o_1vueROsI7GaFJHBOwlMFHTj1IhvB-CAS7j10NwCSm8bNUJ5oBoTELbmByqnYV6XW2_nqr8hxkItRWIyBvaUbmbygGYIRn-I96ERp8GTyHpDVm92cr4hO4E7QieJFj0SLuxR8jd1-9MQFyA6bK2iy4Me11hDq' },
-];
 
 export default function GameDetailView({
   gameId,
@@ -77,7 +73,7 @@ export default function GameDetailView({
   };
 
   return (
-    <div className="max-w-[1240px] mx-auto px-6 py-4 space-y-6">
+    <div className="max-w-4xl mx-auto px-6 py-4 space-y-6">
       
       {/* Breadcrumb Path Trail */}
       <nav className="flex items-center gap-1 text-[10px] font-bold text-gray-400 select-none uppercase tracking-widest text-left">
@@ -88,11 +84,8 @@ export default function GameDetailView({
         <span className="text-[#1b6b4f]">{game.title}</span>
       </nav>
 
-      {/* Main Content Pane Left, Sidebar Right */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        
-        {/* Play Space Column */}
-        <div className="lg:col-span-2 space-y-6 text-left">
+      {/* Play Space Details Content */}
+      <div className="space-y-6 text-left">
           
           {/* Header Title Metadata */}
           <div className="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
@@ -147,9 +140,10 @@ export default function GameDetailView({
               {game.id === 'snake' && <MiniGameSnake />}
               {game.id === 'sudoku' && <MiniGameSoduku />}
               {game.id === 'minesweeper' && <MiniGameMinesweeper />}
+              {game.id === 'tictactoe' && <MiniGameTicTacToe />}
               
               {/* Fallback games display for non-playable cards */}
-              {game.id !== 'cafe' && game.id !== 'jelly' && game.id !== 'wood' && game.id !== 'snake' && game.id !== 'sudoku' && game.id !== 'minesweeper' && (
+              {game.id !== 'cafe' && game.id !== 'jelly' && game.id !== 'wood' && game.id !== 'snake' && game.id !== 'sudoku' && game.id !== 'minesweeper' && game.id !== 'tictactoe' && (
                 <div className="p-8 text-center flex flex-col items-center justify-center min-h-[360px] max-w-lg mx-auto bg-white rounded-3xl border-4 border-teal-50 my-4 shadow-md">
                   <div className="bg-[#a7f3d0] p-4 rounded-full text-[#1b6b4f] mb-4 animate-bounce">
                     <Gamepad2 className="w-10 h-10" />
@@ -221,6 +215,12 @@ export default function GameDetailView({
                     <li>• 2: 根據格子中浮現出的提示數字，在推導為地鼠的格子上按右鍵進行「防護標記 🚩」。</li>
                     <li>• 3: 將所有安全格子點開且全部地鼠都防護完畢即可贏得大豐收！</li>
                   </>
+                ) : game.id === 'tictactoe' ? (
+                  <>
+                    <li>• 1: 在棋盤格子中點擊落爪，印上可愛的橘貓肉墊標記 🐾。</li>
+                    <li>• 2: 對手（AI 白汪汪 🐶 或您的親密好友）會輪流印上骨頭印記 🦴。</li>
+                    <li>• 3: 最先在任意橫向、縱向或斜向對角線端將連續三個標記連成一條線即獲勝！</li>
+                  </>
                 ) : (
                   <>
                     <li>• 1: 通過可愛的美工與舒緩背景琴曲享受休閒。</li>
@@ -247,6 +247,11 @@ export default function GameDetailView({
                   <>
                     <p>• <span className="font-bold text-gray-700">防護與插旗：</span> 電腦端用戶按 <strong>滑鼠右鍵</strong> 可插旗標記地鼠 🚩，行動端用戶 <strong>長按</strong> 相同位置具有相同效果。</p>
                     <p>• <span className="font-bold text-gray-700">金鐘罩首點：</span> 獨創安全優化，您的 <strong>第一次點擊</strong> 絕不會是地鼠，且周圍必為安全坦途！</p>
+                  </>
+                ) : game.id === 'tictactoe' ? (
+                  <>
+                    <p>• <span className="font-bold text-gray-700">雙模式自由行：</span> 支持 <strong>機智AI對抗</strong> 與 <strong>雙人同樂對策</strong>。您可以單獨與不同難度等級的機器汪對陣，或與小夥伴同屏輪流下棋！</p>
+                    <p>• <span className="font-bold text-gray-700">不敗汪王智力：</span> 頂級的「汪王 👑」智力搭載了強大的 <strong>Minimax 決策演算法</strong>，算無遺策，等著你來挑戰平局！</p>
                   </>
                 ) : (
                   <>
@@ -315,47 +320,6 @@ export default function GameDetailView({
             </div>
 
           </div>
-
-        </div>
-
-        {/* Sidebar recommendations right column */}
-        <aside className="space-y-6 text-left">
-          
-          <div className="bg-white p-5 rounded-3xl border border-gray-100 shadow-sm space-y-4">
-            <h3 className="text-xs font-bold text-primary flex items-center gap-1 border-b border-gray-100 pb-3">
-              <span className="material-symbols-outlined text-[16px] text-amber-500">spark</span>
-              精選推薦
-            </h3>
-
-            {/* Recommended side list items */}
-            <div className="flex flex-col gap-3">
-              {SIDEBAR_GAMES.map(item => (
-                <div
-                  key={item.id}
-                  onClick={() => onPlayGame(item.id)}
-                  className="flex gap-3 p-2.5 rounded-2xl hover:bg-gray-50 transition-all duration-200 cursor-pointer border border-transparent hover:border-teal-50 shadow-sm"
-                >
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    referrerPolicy="no-referrer"
-                    className="w-16 h-16 rounded-xl object-cover shrink-0 border"
-                  />
-                  <div className="flex flex-col justify-between py-0.5">
-                    <div>
-                      <h4 className="font-bold text-xs text-gray-850 leading-tight">{item.title}</h4>
-                      <p className="text-[10px] text-gray-400 font-mono mt-0.5">Rating: {item.rating}</p>
-                    </div>
-                    <span className="text-[10px] text-primary font-bold flex items-center gap-0.5 mt-1 hover:underline">
-                      立即進入遊玩 ➔
-                    </span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-        </aside>
 
       </div>
     </div>
