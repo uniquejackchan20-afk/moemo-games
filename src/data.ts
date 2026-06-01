@@ -10,6 +10,7 @@ import minesweeperCover from './assets/images/minesweeper_cover_256_178030589396
 import tictactoeCover from './assets/images/tictactoe_cover_256_1780305915297.jpg';
 import rpsCover from './assets/images/rps_cover_256_1780305935569.jpg';
 import tetrisCover from './assets/images/tetris_cover_256_1780305954863.jpg';
+import breakoutCover from './assets/images/breakout_cover_256_1780308992054.jpg';
 
 
 export const INITIAL_COMMENTS: Record<string, Comment[]> = {
@@ -158,6 +159,24 @@ export const INITIAL_COMMENTS: Record<string, Comment[]> = {
       timeAgo: "1 小時前",
       likes: 21
     }
+  ],
+  breakout: [
+    {
+      id: "comment_breakout_1",
+      author: "蜜糖守望者",
+      avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuCIbpPAVJYf9pTccLQsaOk-IYcP5Cu0unzqkpFhbn1boKQwDg66qPyufc0kD-lJ8XqTjxYRgGi18YtwZ02vDhSD3HmVB6XGZO-Iw5GYVJNs4SGjN2-6GJxXBzwV_BY4ywU9VG2crSKCj_N-_2Z7ni5ji9RLQ6jVmGb0T6U8jD5rlMSBRajuYfNCIZZic4PsKxFClQttRrL0HEZIfmlut8oxJGjd5dtxeCIUKh-n7Swuw0hs-ppsmNH_Vvonc4_hwQ2zzeezli5thFRW",
+      content: "天哪！這個小熊敲磚塊簡直就是夢幻花園的顏值天花板！露珠划過軌跡的微光和樹葉大護盾音效都萌哭了！🥺💖",
+      timeAgo: "剛剛",
+      likes: 31
+    },
+    {
+      id: "comment_breakout_2",
+      author: "撞磚王巴魯",
+      avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuCYM1WChbAHYMPMMBB6IqLKRh344RuCgtHJQUCoQLBCBKw3yCE-aOsfbtLSEcsVDIbXUerUe4tNiXIbBtFCIOjZZifpxWJLqvQNYEECJIKecLeAWrPdQobwDxhidzAyX0AAEfYEU1nKTWrhBk1BGk5PlNyA9jhCkcjEq_NSLc2eQWtI1W7Onh5Ctnh_hQUbkXEFTEPa_bJwhghbbmaNoOE_tuNtF5sDdWGJLY9Ij7nnuvSHN-OAtuHW0xidpwgSld2kqNciIKzzweNx",
+      content: "玩狂暴蜜晶雨模式拿到了 8500 分！掉落的分裂花粉和黏黏蜂蜜真的非常解壓，絕對算是我最愛的一款特訓遊戲啦！🌸🍯",
+      timeAgo: "12 分鐘前",
+      likes: 18
+    }
   ]
 };
 
@@ -305,6 +324,22 @@ export const GAMES_DATA: Game[] = [
     image: tetrisCover,
     description: "和小熊巴魯一塊把五彩繽紛、QQ彈彈的糖果果凍積木完美拼入保鮮盒中吧！挑戰經典、阻礙、和限時速消玩法，體驗滿屏果凍消除時的極致解壓快感！",
     hotness: 96
+  },
+  {
+    id: "breakout",
+    title: "萌熊蜜糖碰碰樂",
+    category: "puzzle",
+    categoryName: "益智解謎",
+    tags: ["撞磚", "休閒", "療癒", "單人遊戲"],
+    difficulty: "easy",
+    difficultyName: "簡單",
+    playTime: "short",
+    playTimeName: "5分鐘內 (休閒)",
+    rating: 4.9,
+    timesPlayed: 52600,
+    image: breakoutCover,
+    description: "手握翠綠的橡葉法寶與小熊巴魯一起出發！靈活反彈色彩斑斕的蜜糖露珠，擊碎各色香甜多汁的蜜糖格與黃金蜂巢，享受漫天花粉分裂及愛心護盾跌落的快樂！",
+    hotness: 95
   }
 ];
 
