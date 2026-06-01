@@ -4,6 +4,13 @@
  */
 
 import { Game, Comment } from './types';
+import snakeCover from './assets/images/snake_cover_256_1780305848486.jpg';
+import sudokuCover from './assets/images/sudoku_cover_256_1780305872182.jpg';
+import minesweeperCover from './assets/images/minesweeper_cover_256_1780305893961.jpg';
+import tictactoeCover from './assets/images/tictactoe_cover_256_1780305915297.jpg';
+import rpsCover from './assets/images/rps_cover_256_1780305935569.jpg';
+import tetrisCover from './assets/images/tetris_cover_256_1780305954863.jpg';
+
 
 export const INITIAL_COMMENTS: Record<string, Comment[]> = {
   cafe: [
@@ -215,7 +222,7 @@ export const GAMES_DATA: Game[] = [
     playTimeName: "5分鐘內 (休閒)",
     rating: 4.8,
     timesPlayed: 52100,
-    image: "/src/assets/images/snake_king_cover_1780230735095.png",
+    image: snakeCover,
     description: "控制超萌森林果凍蛇，在百吃不厭的草地冒險裡，收集草莓與黃金果實，挑戰最長蛇王極限！",
     hotness: 90
   },
@@ -231,7 +238,7 @@ export const GAMES_DATA: Game[] = [
     playTimeName: "5-15分鐘 (挑戰)",
     rating: 4.8,
     timesPlayed: 43200,
-    image: "/src/assets/images/sudoku_cover_1780231940664.png",
+    image: sudokuCover,
     description: "與森林奇妙萌寵一起開動腦筋！在木香悠遠的九宮格魔法盤上，填寫彩色數字並解密療癒的益智數獨謎題。",
     hotness: 91
   },
@@ -247,7 +254,7 @@ export const GAMES_DATA: Game[] = [
     playTimeName: "5-10分鐘 (休閒)",
     rating: 4.9,
     timesPlayed: 32600,
-    image: "/src/assets/images/minesweeper_bunny_cover_1780233195871.png",
+    image: minesweeperCover,
     description: "陪膽小溫順的萌兔朵朵一起在陽光花園拔胡蘿蔔！仔細辨認土壤泥巴處的周圍警告數字，佈置安全防風罩繞開頑皮地鼠。",
     hotness: 93
   },
@@ -263,7 +270,7 @@ export const GAMES_DATA: Game[] = [
     playTimeName: "5分鐘內 (休閒)",
     rating: 4.9,
     timesPlayed: 25100,
-    image: "/src/assets/images/tictactoe_cover_1780235758823.png",
+    image: tictactoeCover,
     description: "軟萌的小貓和小狗在柔軟的地毯上開啟了爪爪棋對抗！放下香黏貓爪和汪汪骨頭，與超群的智慧AI或好友同屏度過快樂時光。",
     hotness: 94
   },
@@ -279,7 +286,7 @@ export const GAMES_DATA: Game[] = [
     playTimeName: "5分鐘內 (休閒)",
     rating: 4.9,
     timesPlayed: 18400,
-    image: "/src/assets/images/rps_bear_cover_1780236377965.png",
+    image: rpsCover,
     description: "在陽光斑駁的童話森林中，和小熊巴魯、松鼠皮皮開啟奇妙的萌趣猜拳爭霸！體驗經典的剪刀石頭布之外，還能解鎖神祕道具、怒氣必殺技能與卡牌奇術模式！",
     hotness: 95
   },
@@ -295,7 +302,7 @@ export const GAMES_DATA: Game[] = [
     playTimeName: "5-15分鐘 (挑戰)",
     rating: 4.9,
     timesPlayed: 38200,
-    image: "/src/assets/images/tetris_bear_cover_1780242039147.png",
+    image: tetrisCover,
     description: "和小熊巴魯一塊把五彩繽紛、QQ彈彈的糖果果凍積木完美拼入保鮮盒中吧！挑戰經典、阻礙、和限時速消玩法，體驗滿屏果凍消除時的極致解壓快感！",
     hotness: 96
   }
