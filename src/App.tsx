@@ -10,6 +10,7 @@ import CategoryView from './components/CategoryView';
 import RankingView from './components/RankingView';
 import GameDetailView from './components/GameDetailView';
 import Footer from './components/Footer';
+import PolicySupportView from './components/PolicySupportView';
 import { GAMES_DATA } from './data';
 import { ArrowUp, Play, Trash2, Heart, Sparkles, Gamepad2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
@@ -17,6 +18,7 @@ import { motion, AnimatePresence } from 'motion/react';
 export default function App() {
   // Master page and game routing targets
   const [currentPage, setCurrentPage] = useState<string>('home');
+  const [supportTab, setSupportTab] = useState<'terms' | 'privacy' | 'faq' | 'contact'>('terms');
   const [selectedGameId, setSelectedGameId] = useState<string>('cafe');
   const [searchQuery, setSearchQuery] = useState('');
   
@@ -36,6 +38,34 @@ export default function App() {
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Listen to hash/regulatory route changes from footer links
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash;
+      if (hash === '#terms') {
+        setCurrentPage('support');
+        setSupportTab('terms');
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      } else if (hash === '#privacy') {
+        setCurrentPage('support');
+        setSupportTab('privacy');
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      } else if (hash === '#faq') {
+        setCurrentPage('support');
+        setSupportTab('faq');
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      } else if (hash === '#contact') {
+        setCurrentPage('support');
+        setSupportTab('contact');
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      }
+    };
+
+    handleHashChange();
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
 
   const handleScrollToTop = () => {
@@ -286,6 +316,16 @@ export default function App() {
                 likedGameIds={likedGameIds}
                 onToggleLike={handleToggleLike}
                 loggedInUser={loggedInUser}
+              />
+            )}
+
+            {currentPage === 'support' && (
+              <PolicySupportView
+                initialTab={supportTab}
+                onNavigateHome={() => {
+                  setCurrentPage('home');
+                  window.location.hash = '';
+                }}
               />
             )}
           </motion.div>
