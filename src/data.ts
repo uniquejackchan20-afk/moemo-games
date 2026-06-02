@@ -15,6 +15,8 @@ import bubbleCover from './assets/images/bubble_cover_256_1780365248727.jpg';
 import tilematchCover from './assets/images/tilematch_cover_1780366535767.jpg';
 import sortworksCover from './assets/images/sortworks_cover_1780367280259.jpg';
 import mahjongCover from './assets/images/mahjong_cover_1780367800.jpg';
+import fruitCover from './assets/images/fruit_cover_1780368000.jpg';
+import checkersCover from './assets/images/checkers_cover.jpg';
 
 
 export const INITIAL_COMMENTS: Record<string, Comment[]> = {
@@ -253,6 +255,42 @@ export const INITIAL_COMMENTS: Record<string, Comment[]> = {
       timeAgo: "15 分鐘前",
       likes: 31
     }
+  ],
+  fruitmachine: [
+    {
+      id: "comment_fruit_1",
+      author: "水果轉盤發燒友",
+      avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuCIbpPAVJYf9pTccLQsaOk-IYcP5Cu0unzqkpFhbn1boKQwDg66qPyufc0kD-lJ8XqTjxYRgGi18YtwZ02vDhSD3HmVB6XGZO-Iw5GYVJNs4SGjN2-6GJxXBzwV_BY4ywU9VG2crSKCj_N-_2Z7ni5ji9RLQ6jVmGb0T6U8jD5rlMSBRajuYfNCIZZic4PsKxFClQttRrL0HEZIfmlut8oxJGjd5dtxeCIUKh-n7Swuw0hs-ppsmNH_Vvonc4_hwQ2zzeezli5thFRW",
+      content: "這個國潮復古水果盤真的太勾起童年回憶了！每次點亮「大三元」或者是觸發「天降祥瑞送燈」時，編鐘嗩吶音效和金幣雨特效誠意滿滿，太嗨了！🍒🍊✨",
+      timeAgo: "剛才",
+      likes: 52
+    },
+    {
+      id: "comment_fruit_2",
+      author: "瑞獸金禧小錦鯉",
+      avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuCYM1WChbAHYMPMMBB6IqLKRh344RuCgtHJQUCoQLBCBKw3yCE-aOsfbtLSEcsVDIbXUerUe4tNiXIbBtFCIOjZZifpxWJLqvQNYEECJIKecLeAWrPdQobwDxhidzAyX0AAEfYEU1nKTWrhBk1BGk5PlNyA9jhCkcjEq_NSLc2eQWtI1W7Onh5Ctnh_hQUbkXEFTEPa_bJwhghbbmaNoOE_tuNtF5sDdWGJLY9Ij7nnuvSHN-OAtuHW0xidpwgSld2kqNciIKzzweNx",
+      content: "小萌獅在機器頂部跳舞的樣子簡直太Ｑ彈了！玩起來非常絲滑，金禧翻倍爆燈特別令人欣喜，絕對是滿分療癒之作！🦁💰🎰",
+      timeAgo: "10 分鐘前",
+      likes: 37
+    }
+  ],
+  checkers: [
+    {
+      id: "comment_checkers_1",
+      author: "手談小仙童",
+      avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuCIbpPAVJYf9pTccLQsaOk-IYcP5Cu0unzqkpFhbn1boKQwDg66qPyufc0kD-lJ8XqTjxYRgGi18YtwZ02vDhSD3HmVB6XGZO-Iw5GYVJNs4SGjN2-6GJxXBzwV_BY4ywU9VG2crSKCj_N-_2Z7ni5ji9RLQ6jVmGb0T6U8jD5rlMSBRajuYfNCIZZic4PsKxFClQttRrL0HEZIfmlut8oxJGjd5dtxeCIUKh-n7Swuw0hs-ppsmNH_Vvonc4_hwQ2zzeezli5thFRW",
+      content: "天啊！這個萌獅呈祥跳跳棋也做得太精緻了吧！紅獅和玉兔雕刻得栩栩如生！聽著古箏音效一子子跳吃，成功加冕棋王那一刻真的有王者之尊！🦁👑",
+      timeAgo: "剛剛",
+      likes: 45
+    },
+    {
+      id: "comment_checkers_2",
+      author: "棋聖入室弟子",
+      avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuCYM1WChbAHYMPMMBB6IqLKRh344RuCgtHJQUCoQLBCBKw3yCE-aOsfbtLSEcsVDIbXUerUe4tNiXIbBtFCIOjZZifpxWJLqvQNYEECJIKecLeAWrPdQobwDxhidzAyX0AAEfYEU1nKTWrhBk1BGk5PlNyA9jhCkcjEq_NSLc2eQWtI1W7Onh5Ctnh_hQUbkXEFTEPa_bJwhghbbmaNoOE_tuNtF5sDdWGJLY9Ij7nnuvSHN-OAtuHW0xidpwgSld2kqNciIKzzweNx",
+      content: "高難度的仙鶴算力真的拉滿了！Minimax算力思維好聰明，把我包圍好幾次！一邊手談、一邊更換宮廷紅金和翠玉漆色，特別有意境！🎨🀄",
+      timeAgo: "10 分鐘前",
+      likes: 32
+    }
   ]
 };
 
@@ -480,6 +518,38 @@ export const GAMES_DATA: Game[] = [
     image: mahjongCover,
     description: "迎來蓬鬆如雲的雀仙萌貓「胖胖」！在香氣裊裊、祥光躍動的暖閣中，解鎖由純手作美玉打造的立體吉兆麻將牌。尋找並點擊相同花色的對牌進行連消，逐步拼湊出「大四喜」、「十三幺」等祥瑞大牌！",
     hotness: 99
+  },
+  {
+    id: "fruitmachine",
+    title: "金禧瑞獸水果盤",
+    category: "casual",
+    categoryName: "休閒益智",
+    tags: ["復古", "轉盤", "祥瑞", "爆燈", "療癒"],
+    difficulty: "easy",
+    difficultyName: "簡單",
+    playTime: "short",
+    playTimeName: "5分鐘內 (休閒)",
+    rating: 4.9,
+    timesPlayed: 34200,
+    image: fruitCover,
+    description: "天降金禧，福光滿盤！攜手萌態可掬、踏著魔力舞步的金色小瑞獅進行童年復古水果輪盤大挑戰。透過投注並點亮環繞的各色福運水果與黃金福袋，觸發大三元、大四喜及天降送燈等超高翻倍好禮，喜迎金元寶之雨！",
+    hotness: 100
+  },
+  {
+    id: "checkers",
+    title: "萌獅呈祥跳跳棋",
+    category: "casual",
+    categoryName: "休閒益智",
+    tags: ["跳棋", "雙人", "益智", "國潮", "競技"],
+    difficulty: "medium",
+    difficultyName: "中等",
+    playTime: "medium",
+    playTimeName: "5-15分鐘 (挑戰)",
+    rating: 4.9,
+    timesPlayed: 12500,
+    image: checkersCover,
+    description: "指掌之間祥光曜，點兵點將分輸贏！帶領英姿勃勃的「萌仙紅獅」攻城拔寨，手談鬥智，戰勝古雅仙閣中的「玉兔仙子」。支持單人對戰智力AI與雙同屏博弈，並可自由更換宮廷墨玉、紅金與翠白等多種精美棋色，妙趣無邊！",
+    hotness: 98
   }
 ];
 
