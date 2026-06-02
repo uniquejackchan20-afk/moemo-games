@@ -12,6 +12,8 @@ import rpsCover from './assets/images/rps_cover_256_1780305935569.jpg';
 import tetrisCover from './assets/images/tetris_cover_256_1780305954863.jpg';
 import breakoutCover from './assets/images/breakout_cover_256_1780308992054.jpg';
 import bubbleCover from './assets/images/bubble_cover_256_1780365248727.jpg';
+import tilematchCover from './assets/images/tilematch_cover_1780366535767.jpg';
+import sortworksCover from './assets/images/sortworks_cover_1780367280259.jpg';
 
 
 export const INITIAL_COMMENTS: Record<string, Comment[]> = {
@@ -196,6 +198,42 @@ export const INITIAL_COMMENTS: Record<string, Comment[]> = {
       timeAgo: "5 分鐘前",
       likes: 14
     }
+  ],
+  tilematching: [
+    {
+      id: "comment_tile_1",
+      author: "吉祥橘子醬",
+      avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuCIbpPAVJYf9pTccLQsaOk-IYcP5Cu0unzqkpFhbn1boKQwDg66qPyufc0kD-lJ8XqTjxYRgGi18YtwZ02vDhSD3HmVB6XGZO-Iw5GYVJNs4SGjN2-6GJxXBzwV_BY4ywU9VG2crSKCj_N-_2Z7ni5ji9RLQ6jVmGb0T6U8jD5rlMSBRajuYfNCIZZic4PsKxFClQttRrL0HEZIfmlut8oxJGjd5dtxeCIUKh-n7Swuw0hs-ppsmNH_Vvonc4_hwQ2zzeezli5thFRW",
+      content: "我的天！招財松鼠「阿吉」也太富貴萌了吧！聽著古琴合成的音樂清消除，每次消去柿子和蘋果時彈出的吉祥祝福語真討口彩！🍎🍊🎋",
+      timeAgo: "剛剛",
+      likes: 38
+    },
+    {
+      id: "comment_tile_2",
+      author: "歲歲平安老法師",
+      avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuCYM1WChbAHYMPMMBB6IqLKRh344RuCgtHJQUCoQLBCBKw3yCE-aOsfbtLSEcsVDIbXUerUe4tNiXIbBtFCIOjZZifpxWJLqvQNYEECJIKecLeAWrPdQobwDxhidzAyX0AAEfYEU1nKTWrhBk1BGk5PlNyA9jhCkcjEq_NSLc2eQWtI1W7Onh5Ctnh_hQUbkXEFTEPa_bJwhghbbmaNoOE_tuNtF5sDdWGJLY9Ij7nnuvSHN-OAtuHW0xidpwgSld2kqNciIKzzweNx",
+      content: "最愛第三關祥瑞大圓滿！多層重疊的3D透透感做得真到位，明暗強烈，配合松果小揹簍移出，很有解謎破陣的儀式感！🐿️🧧",
+      timeAgo: "8 分鐘前",
+      likes: 21
+    }
+  ],
+  sortworks: [
+    {
+      id: "comment_sort_1",
+      author: "玲瓏大掌櫃",
+      avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuCIbpPAVJYf9pTccLQsaOk-IYcP5Cu0unzqkpFhbn1boKQwDg66qPyufc0kD-lJ8XqTjxYRgGi18YtwZ02vDhSD3HmVB6XGZO-Iw5GYVJNs4SGjN2-6GJxXBzwV_BY4ywU9VG2crSKCj_N-_2Z7ni5ji9RLQ6jVmGb0T6U8jD5rlMSBRajuYfNCIZZic4PsKxFClQttRrL0HEZIfmlut8oxJGjd5dtxeCIUKh-n7Swuw0hs-ppsmNH_Vvonc4_hwQ2zzeezli5thFRW",
+      content: "天哪，紅熊貓「小禾」太討喜了！每次當我消下一整筒金璨珠時他都放煙花翻跟頭，古風編鐘般的音效也極具儀式感！🎋🌟🌾",
+      timeAgo: "1 分鐘前",
+      likes: 42
+    },
+    {
+      id: "comment_sort_2",
+      author: "五行大衍居士",
+      avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuCYM1WChbAHYMPMMBB6IqLKRh344RuCgtHJQUCoQLBCBKw3yCE-aOsfbtLSEcsVDIbXUerUe4tNiXIbBtFCIOjZZifpxWJLqvQNYEECJIKecLeAWrPdQobwDxhidzAyX0AAEfYEU1nKTWrhBk1BGk5PlNyA9jhCkcjEq_NSLc2eQWtI1W7Onh5Ctnh_hQUbkXEFTEPa_bJwhghbbmaNoOE_tuNtF5sDdWGJLY9Ij7nnuvSHN-OAtuHW0xidpwgSld2kqNciIKzzweNx",
+      content: "難得一見的高雅玉珠分類遊戲！3D微縮感的翡翠竹筒很有質感。撤銷功能十分良心，後面關卡很有深度！🧐🏆",
+      timeAgo: "12 分鐘前",
+      likes: 29
+    }
   ]
 };
 
@@ -375,6 +413,38 @@ export const GAMES_DATA: Game[] = [
     image: bubbleCover,
     description: "舉起朵朵兔子特製的粉嫩魔法吹管！精準瞄準投擲夢幻絢麗的彩色泡泡露，創造 3 個以上的花粉消除奇蹟，在紛紛灑灑的泡泡雨和療癒連消中收穫滿載朝氣！",
     hotness: 96
+  },
+  {
+    id: "tilematching",
+    title: "萌獸柿柿如意消",
+    category: "puzzle",
+    categoryName: "益智解謎",
+    tags: ["疊疊消", "消除", "療癒", "單人遊戲"],
+    difficulty: "medium",
+    difficultyName: "普通",
+    playTime: "medium",
+    playTimeName: "5-15分鐘 (挑戰)",
+    rating: 4.9,
+    timesPlayed: 24500,
+    image: tilematchCover,
+    description: "與招財小松鼠阿吉攜手入局！看準重疊錯落的吉祥花果玉瓷塊，明暗調色，步步為營，將柿子、桔子和仙桃相匹配，在阿吉神奇松果揹簍的加持下享受無與倫比的好運速消！",
+    hotness: 97
+  },
+  {
+    id: "sortworks",
+    title: "萌寵五福玲瓏閣",
+    category: "puzzle",
+    categoryName: "益智解謎",
+    tags: ["分類", "排序", "五行", "療癒"],
+    difficulty: "medium",
+    difficultyName: "普通",
+    playTime: "medium",
+    playTimeName: "5-15分鐘 (挑戰)",
+    rating: 4.9,
+    timesPlayed: 18900,
+    image: sortworksCover,
+    description: "閣內玲瓏五行玉珠雜亂堆放，快展現你的調配才智！將散落的珠子按相同五行色彩與吉利寓意完整歸類到竹筒與如意罐中，由紅熊貓閣主「小禾」為你常駐祥瑞福運！",
+    hotness: 98
   }
 ];
 
