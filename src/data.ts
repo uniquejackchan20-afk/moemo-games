@@ -14,6 +14,7 @@ import breakoutCover from './assets/images/breakout_cover_256_1780308992054.jpg'
 import bubbleCover from './assets/images/bubble_cover_256_1780365248727.jpg';
 import tilematchCover from './assets/images/tilematch_cover_1780366535767.jpg';
 import sortworksCover from './assets/images/sortworks_cover_1780367280259.jpg';
+import mahjongCover from './assets/images/mahjong_cover_1780367800.jpg';
 
 
 export const INITIAL_COMMENTS: Record<string, Comment[]> = {
@@ -234,6 +235,24 @@ export const INITIAL_COMMENTS: Record<string, Comment[]> = {
       timeAgo: "12 分鐘前",
       likes: 29
     }
+  ],
+  mahjong: [
+    {
+      id: "comment_mahjong_1",
+      author: "雀界白面書生",
+      avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuCIbpPAVJYf9pTccLQsaOk-IYcP5Cu0unzqkpFhbn1boKQwDg66qPyufc0kD-lJ8XqTjxYRgGi18YtwZ02vDhSD3HmVB6XGZO-Iw5GYVJNs4SGjN2-6GJxXBzwV_BY4ywU9VG2crSKCj_N-_2Z7ni5ji9RLQ6jVmGb0T6U8jD5rlMSBRajuYfNCIZZic4PsKxFClQttRrL0HEZIfmlut8oxJGjd5dtxeCIUKh-n7Swuw0hs-ppsmNH_Vvonc4_hwQ2zzeezli5thFRW",
+      content: "實在太好玩了！沒想到還能一邊在大牌雀中消消消，一邊積攢聽牌，最後組成「大四喜」或者「大三元」那一下，金光特效簡直炸裂！🀄🎨🐾",
+      timeAgo: "剛才",
+      likes: 48
+    },
+    {
+      id: "comment_mahjong_2",
+      author: "雀后喵喵醬",
+      avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuCYM1WChbAHYMPMMBB6IqLKRh344RuCgtHJQUCoQLBCBKw3yCE-aOsfbtLSEcsVDIbXUerUe4tNiXIbBtFCIOjZZifpxWJLqvQNYEECJIKecLeAWrPdQobwDxhidzAyX0AAEfYEU1nKTWrhBk1BGk5PlNyA9jhCkcjEq_NSLc2eQWtI1W7Onh5Ctnh_hQUbkXEFTEPa_bJwhghbbmaNoOE_tuNtF5sDdWGJLY9Ij7nnuvSHN-OAtuHW0xidpwgSld2kqNciIKzzweNx",
+      content: "萌貓「胖胖」也太軟糯了吧，每次胡大牌時還在旁邊打著太極翻滾，特別適合跟朋友一起比拼胡牌聽牌的速度！🀆🀅🀄🧧",
+      timeAgo: "15 分鐘前",
+      likes: 31
+    }
   ]
 };
 
@@ -445,6 +464,22 @@ export const GAMES_DATA: Game[] = [
     image: sortworksCover,
     description: "閣內玲瓏五行玉珠雜亂堆放，快展現你的調配才智！將散落的珠子按相同五行色彩與吉利寓意完整歸類到竹筒與如意罐中，由紅熊貓閣主「小禾」為你常駐祥瑞福運！",
     hotness: 98
+  },
+  {
+    id: "mahjong",
+    title: "萌仙吉兆雀神樂",
+    category: "puzzle",
+    categoryName: "益智解謎",
+    tags: ["麻將", "配對", "益智", "國粹", "療癒"],
+    difficulty: "easy",
+    difficultyName: "簡單",
+    playTime: "medium",
+    playTimeName: "5-15分鐘 (挑戰)",
+    rating: 4.9,
+    timesPlayed: 21500,
+    image: mahjongCover,
+    description: "迎來蓬鬆如雲的雀仙萌貓「胖胖」！在香氣裊裊、祥光躍動的暖閣中，解鎖由純手作美玉打造的立體吉兆麻將牌。尋找並點擊相同花色的對牌進行連消，逐步拼湊出「大四喜」、「十三幺」等祥瑞大牌！",
+    hotness: 99
   }
 ];
 
