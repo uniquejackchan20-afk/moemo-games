@@ -16,6 +16,7 @@ import MiniGameTicTacToe from './MiniGameTicTacToe';
 import MiniGameRockPaperScissors from './MiniGameRockPaperScissors';
 import MiniGameTetris from './MiniGameTetris';
 import MiniGameBreakout from './MiniGameBreakout';
+import MiniGameBubbleShooter from './MiniGameBubbleShooter';
 import { Heart, Star, Send, Share2, Play, ChevronRight, Gamepad2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
@@ -147,9 +148,10 @@ export default function GameDetailView({
               {game.id === 'rockpaperscissors' && <MiniGameRockPaperScissors />}
               {game.id === 'tetris' && <MiniGameTetris />}
               {game.id === 'breakout' && <MiniGameBreakout />}
+              {game.id === 'bubble' && <MiniGameBubbleShooter />}
               
               {/* Fallback games display for non-playable cards */}
-              {game.id !== 'cafe' && game.id !== 'jelly' && game.id !== 'wood' && game.id !== 'snake' && game.id !== 'sudoku' && game.id !== 'minesweeper' && game.id !== 'tictactoe' && game.id !== 'rockpaperscissors' && game.id !== 'tetris' && game.id !== 'breakout' && (
+              {game.id !== 'cafe' && game.id !== 'jelly' && game.id !== 'wood' && game.id !== 'snake' && game.id !== 'sudoku' && game.id !== 'minesweeper' && game.id !== 'tictactoe' && game.id !== 'rockpaperscissors' && game.id !== 'tetris' && game.id !== 'breakout' && game.id !== 'bubble' && (
                 <div className="p-8 text-center flex flex-col items-center justify-center min-h-[360px] max-w-lg mx-auto bg-white rounded-3xl border-4 border-teal-50 my-4 shadow-md">
                   <div className="bg-[#a7f3d0] p-4 rounded-full text-[#1b6b4f] mb-4 animate-bounce">
                     <Gamepad2 className="w-10 h-10" />

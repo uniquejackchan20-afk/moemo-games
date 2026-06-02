@@ -11,6 +11,7 @@ import tictactoeCover from './assets/images/tictactoe_cover_256_1780305915297.jp
 import rpsCover from './assets/images/rps_cover_256_1780305935569.jpg';
 import tetrisCover from './assets/images/tetris_cover_256_1780305954863.jpg';
 import breakoutCover from './assets/images/breakout_cover_256_1780308992054.jpg';
+import bubbleCover from './assets/images/bubble_cover_256_1780365248727.jpg';
 
 
 export const INITIAL_COMMENTS: Record<string, Comment[]> = {
@@ -177,6 +178,24 @@ export const INITIAL_COMMENTS: Record<string, Comment[]> = {
       timeAgo: "12 分鐘前",
       likes: 18
     }
+  ],
+  bubble: [
+    {
+      id: "comment_bubble_1",
+      author: "彩虹泡泡兔",
+      avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuCIbpPAVJYf9pTccLQsaOk-IYcP5Cu0unzqkpFhbn1boKQwDg66qPyufc0kD-lJ8XqTjxYRgGi18YtwZ02vDhSD3HmVB6XGZO-Iw5GYVJNs4SGjN2-6GJxXBzwV_BY4ywU9VG2crSKCj_N-_2Z7ni5ji9RLQ6jVmGb0T6U8jD5rlMSBRajuYfNCIZZic4PsKxFClQttRrL0HEZIfmlut8oxJGjd5dtxeCIUKh-n7Swuw0hs-ppsmNH_Vvonc4_hwQ2zzeezli5thFRW",
+      content: "氣泡球相撞彈出的聲音好治癒！特別是連鎖大消解和氣泡掉落的時候，簡真是極致的視覺解壓享受！ 🎈🐰💖",
+      timeAgo: "剛剛",
+      likes: 25
+    },
+    {
+      id: "comment_bubble_2",
+      author: "流光森林探索家",
+      avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuCYM1WChbAHYMPMMBB6IqLKRh344RuCgtHJQUCoQLBCBKw3yCE-aOsfbtLSEcsVDIbXUerUe4tNiXIbBtFCIOjZZifpxWJLqvQNYEECJIKecLeAWrPdQobwDxhidzAyX0AAEfYEU1nKTWrhBk1BGk5PlNyA9jhCkcjEq_NSLc2eQWtI1W7Onh5Ctnh_hQUbkXEFTEPa_bJwhghbbmaNoOE_tuNtF5sDdWGJLY9Ij7nnuvSHN-OAtuHW0xidpwgSld2kqNciIKzzweNx",
+      content: "無盡意境雨模式到後面降下來的速度好刺激，朵朵兔子急得一直耳朵動，實在是太討人喜歡了！🐇🌟",
+      timeAgo: "5 分鐘前",
+      likes: 14
+    }
   ]
 };
 
@@ -340,6 +359,22 @@ export const GAMES_DATA: Game[] = [
     image: breakoutCover,
     description: "手握翠綠的橡葉法寶與小熊巴魯一起出發！靈活反彈色彩斑斕的蜜糖露珠，擊碎各色香甜多汁的蜜糖格與黃金蜂巢，享受漫天花粉分裂及愛心護盾跌落的快樂！",
     hotness: 95
+  },
+  {
+    id: "bubble",
+    title: "萌兔花園氣泡彈",
+    category: "puzzle",
+    categoryName: "益智解謎",
+    tags: ["射擊", "消除", "療癒", "單人遊戲"],
+    difficulty: "easy",
+    difficultyName: "簡單",
+    playTime: "short",
+    playTimeName: "5分鐘內 (休閒)",
+    rating: 4.9,
+    timesPlayed: 31200,
+    image: bubbleCover,
+    description: "舉起朵朵兔子特製的粉嫩魔法吹管！精準瞄準投擲夢幻絢麗的彩色泡泡露，創造 3 個以上的花粉消除奇蹟，在紛紛灑灑的泡泡雨和療癒連消中收穫滿載朝氣！",
+    hotness: 96
   }
 ];
 
