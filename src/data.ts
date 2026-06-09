@@ -4,19 +4,19 @@
  */
 
 import { Game, Comment } from './types';
-import snakeCover from './assets/images/snake_cover_256_1780305848486.jpg';
-import sudokuCover from './assets/images/sudoku_cover_256_1780305872182.jpg';
-import minesweeperCover from './assets/images/minesweeper_cover_256_1780305893961.jpg';
-import tictactoeCover from './assets/images/tictactoe_cover_256_1780305915297.jpg';
-import rpsCover from './assets/images/rps_cover_256_1780305935569.jpg';
-import tetrisCover from './assets/images/tetris_cover_256_1780305954863.jpg';
-import breakoutCover from './assets/images/breakout_cover_256_1780308992054.jpg';
-import bubbleCover from './assets/images/bubble_cover_256_1780365248727.jpg';
-import tilematchCover from './assets/images/tilematch_cover_1780366535767.jpg';
-import sortworksCover from './assets/images/sortworks_cover_1780367280259.jpg';
-import mahjongCover from './assets/images/mahjong_cover_1780367800.jpg';
-import fruitCover from './assets/images/fruit_cover_1780368000.jpg';
-import checkersCover from './assets/images/checkers_cover.jpg';
+import snakeCover from './assets/images/snake_cover_1780992003729.png';
+import sudokuCover from './assets/images/sudoku_cover_1780991962332.png';
+import minesweeperCover from './assets/images/minesweeper_cover_1780991975895.png';
+import tictactoeCover from './assets/images/tictactoe_cover_1780991990614.png';
+import rpsCover from './assets/images/rps_cover_1780992021221.png';
+import tetrisCover from './assets/images/tetris_cover_1780992034766.png';
+import breakoutCover from './assets/images/breakout_cover_1780992045640.png';
+import bubbleCover from './assets/images/bubble_cover_1780992060996.png';
+import tilematchCover from './assets/images/tilematch_cover_1780992077705.png';
+import sortworksCover from './assets/images/sortworks_cover_1780992091457.png';
+import mahjongCover from './assets/images/mahjong_cover_1780992105622.png';
+import fruitCover from './assets/images/fruit_cover_1780992115925.png';
+import checkersCover from './assets/images/checkers_cover_1780991935923.png';
 
 
 export const INITIAL_COMMENTS: Record<string, Comment[]> = {

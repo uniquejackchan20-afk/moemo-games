@@ -212,7 +212,6 @@ export default function App() {
                           <img
                             src={game.image}
                             alt={game.title}
-                            referrerPolicy="no-referrer"
                             className="w-20 h-20 rounded-2xl object-cover shrink-0 border"
                           />
                           <div className="flex flex-col justify-between py-0.5 flex-grow">
@@ -275,7 +274,6 @@ export default function App() {
                           <img
                             src={game.image}
                             alt={game.title}
-                            referrerPolicy="no-referrer"
                             className="w-20 h-20 rounded-2xl object-cover shrink-0 border"
                           />
                           <div className="flex flex-col justify-between py-0.5 flex-grow">

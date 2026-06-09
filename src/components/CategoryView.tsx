@@ -242,7 +242,6 @@ export default function CategoryView({
                   <img
                     src={game.image}
                     alt={game.title}
-                    referrerPolicy="no-referrer"
                     className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
                   />
                   {/* Rating Badge */}

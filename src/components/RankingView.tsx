@@ -54,7 +54,6 @@ export default function RankingView({ onPlayGame }: RankingViewProps) {
               <img
                 src={rank2.image}
                 alt={rank2.title}
-                referrerPolicy="no-referrer"
                 className="w-24 h-24 rounded-full object-cover mx-auto border-4 border-stone-100 shadow"
               />
 
@@ -98,7 +97,6 @@ export default function RankingView({ onPlayGame }: RankingViewProps) {
               <img
                 src={rank1.image}
                 alt={rank1.title}
-                referrerPolicy="no-referrer"
                 className="w-28 h-28 rounded-full object-cover mx-auto border-4 border-amber-200 shadow-md"
               />
 
@@ -137,7 +135,6 @@ export default function RankingView({ onPlayGame }: RankingViewProps) {
               <img
                 src={rank3.image}
                 alt={rank3.title}
-                referrerPolicy="no-referrer"
                 className="w-24 h-24 rounded-full object-cover mx-auto border-4 border-orange-100 shadow"
               />
 

@@ -79,7 +79,6 @@ export default function HomeView({
           <img
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuBS84TmphOqbWStZyoOxno59BF9Se1A4CUKxR7NY3V05peGQPy2TzVDm7nsesDt8tRRc5iKD2Y3F-_SztMiXvYNrnYQ-SWQMaiPy_fOIJLfMfjj9S66nFPnbHWHC-7sIxWqXk_RTgUN-03rXtRI0Y3PoycQA2GFsPHB-PTp8wbQJIAqRr02HsyYFw5YrwpnsxFJeYfqwRUYVDjvBO7tfbz7PHEdn9olnTs894u908O0a3lj5YrBdnI26dneoANEDoLhx39BKdttIl5z"
             alt="Animal Cafe Cozy Room Decoration"
-            referrerPolicy="no-referrer"
             className="absolute inset-0 w-full h-full object-cover"
           />
           {/* Subtle fade shadow overlay on image */}
@@ -139,7 +138,6 @@ export default function HomeView({
               <img
                 src={recommendedBig.image}
                 alt={recommendedBig.title}
-                referrerPolicy="no-referrer"
                 className="absolute inset-0 w-full h-full object-cover"
               />
             </div>
@@ -182,7 +180,6 @@ export default function HomeView({
               <img
                 src={recommendedSm1.image}
                 alt={recommendedSm1.title}
-                referrerPolicy="no-referrer"
                 className="w-20 h-20 rounded-xl object-cover shrink-0"
               />
               <div className="flex flex-col justify-between py-1">
@@ -204,7 +201,6 @@ export default function HomeView({
               <img
                 src={recommendedSm2.image}
                 alt={recommendedSm2.title}
-                referrerPolicy="no-referrer"
                 className="w-20 h-20 rounded-xl object-cover shrink-0"
               />
               <div className="flex flex-col justify-between py-1">
@@ -250,7 +246,6 @@ export default function HomeView({
                 <img
                   src={game.image}
                   alt={game.title}
-                  referrerPolicy="no-referrer"
                   className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
                 />
                 
