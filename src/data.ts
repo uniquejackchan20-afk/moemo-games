@@ -19,6 +19,7 @@ import fruitCover from './assets/images/fruit_cover_1780992115925.png';
 import checkersCover from './assets/images/checkers_cover_1780991935923.png';
 import flipperBirdCover from './assets/images/flipper_bird_cover.jpg';
 import supermarioCover from './assets/images/super_mario_cover.jpg';
+import angrybirdsCover from './assets/images/angry_birds_cover.jpg';
 
 
 export const INITIAL_COMMENTS: Record<string, Comment[]> = {
@@ -325,9 +326,27 @@ export const INITIAL_COMMENTS: Record<string, Comment[]> = {
       id: "comment_supermario_2",
       author: "馬力歐骨灰玩家",
       avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuCYM1WChbAHYMPMMBB6IqLKRh344RuCgtHJQUCoQLBCBKw3yCE-aOsfbtLSEcsVDIbXUerUe4tNiXIbBtFCIOjZZifpxWJLqvQNYEECJIKecLeAWrPdQobwDxhidzAyX0AAEfYEU1nKTWrhBk1BGk5PlNyA9jhCkcjEq_NSLc2eQWtI1W7Onh5Ctnh_hQUbkXEFTEPa_bJwhghbbmaNoOE_tuNtF5sDdWGJLY9Ij7nnuvSHN-OAtuHW0xidpwgSld2kqNciIKzzweNx",
-      content: "操作超級絲滑！跳躍物理曲線和慣性做得非常有水準，踩蘑菇狀的小包子怪還能高高躍起，背景還是山水畫，太有品味了！",
+      content: "操作超級絲滑！跳躍物理曲線 and 慣性做得非常有水準，踩蘑菇狀的小包子怪還能高高躍起，背景還是山水畫，太有品味了！",
       timeAgo: "18 分鐘前",
       likes: 15
+    }
+  ],
+  angrybird: [
+    {
+      id: "comment_angrybird_1",
+      author: "九天彈射大師",
+      avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuCIbpPAVJYf9pTccLQsaOk-IYcP5Cu0unzqkpFhbn1boKQwDg66qPyufc0kD-lJ8XqTjxYRgGi18YtwZ02vDhSD3HmVB6XGZO-Iw5GYVJNs4SGjN2-6GJxXBzwV_BY4ywU9VG2crSKCj_N-_2Z7ni5ji9RLQ6jVmGb0T6U8jD5rlMSBRajuYfNCIZZic4PsKxFClQttRrL0HEZIfmlut8oxJGjd5dtxeCIUKh-n7Swuw0hs-ppsmNH_Vvonc4_hwQ2zzeezli5thFRW",
+      content: "用彈弓把神雀彈飛出去擊碎高塔的物理慣性好真實！不同顏色的神雀居然還有分裂、加速和爆炸等特殊法術，太耐玩了！💥",
+      timeAgo: "5 分鐘前",
+      likes: 38
+    },
+    {
+      id: "comment_angrybird_2",
+      author: "萌雀守護者",
+      avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuCYM1WChbAHYMPMMBB6IqLKRh344RuCgtHJQUCoQLBCBKw3yCE-aOsfbtLSEcsVDIbXUerUe4tNiXIbBtFCIOjZZifpxWJLqvQNYEECJIKecLeAWrPdQobwDxhidzAyX0AAEfYEU1nKTWrhBk1BGk5PlNyA9jhCkcjEq_NSLc2eQWtI1W7Onh5Ctnh_hQUbkXEFTEPa_bJwhghbbmaNoOE_tuNtF5sDdWGJLY9Ij7nnuvSHN-OAtuHW0xidpwgSld2kqNciIKzzweNx",
+      content: "國產仙俠畫風跟憤怒鳥完美結合！綠包子精一臉委屈地看著塔倒塌，簡直萌化了。大力推薦大家嘗試第3關，很有策略性！",
+      timeAgo: "12 分鐘前",
+      likes: 19
     }
   ]
 };
@@ -620,6 +639,22 @@ export const GAMES_DATA: Game[] = [
     image: supermarioCover,
     description: "化身活潑可愛的「小紅熊貓大俠」，深入古雅神祕的桃花源仙境！在清麗如畫的墨竹與飛簷瓦台間跳躍、奔跑。頂破金磚石板收集元寶和天桃仙桃、靈活避開和踩扁蹦跳的包子精怪，奪取青蓮福旗圓滿通關！",
     hotness: 98
+  },
+  {
+    id: "angrybird",
+    title: "怒羽神雀鬧仙宮",
+    category: "casual",
+    categoryName: "休閒益智",
+    tags: ["物理", "冒險", "彈射", "益智", "國風"],
+    difficulty: "medium",
+    difficultyName: "中等",
+    playTime: "medium",
+    playTimeName: "5-15分鐘 (挑戰)",
+    rating: 4.9,
+    timesPlayed: 32600,
+    image: angrybirdsCover,
+    description: "拉開「神木震天彈弓」，指揮色彩繽紛、身懷佛果絕技的「五彩怒羽神雀」！瞄準貪吃天桃的大肚綠包精怪。利用重力弧線，破壞竹排、天瓦與仙晶樓宇，解救被盜的天宮蟠桃，重振仙宮法度！",
+    hotness: 97
   }
 ];
 
