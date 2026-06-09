@@ -17,6 +17,7 @@ import sortworksCover from './assets/images/sortworks_cover_1780992091457.png';
 import mahjongCover from './assets/images/mahjong_cover_1780992105622.png';
 import fruitCover from './assets/images/fruit_cover_1780992115925.png';
 import checkersCover from './assets/images/checkers_cover_1780991935923.png';
+import flipperBirdCover from './assets/images/flipper_bird_cover.jpg';
 
 
 export const INITIAL_COMMENTS: Record<string, Comment[]> = {
@@ -291,6 +292,24 @@ export const INITIAL_COMMENTS: Record<string, Comment[]> = {
       timeAgo: "10 分鐘前",
       likes: 32
     }
+  ],
+  flipperbird: [
+    {
+      id: "comment_flipper_1",
+      author: "仙氣飄飄雀",
+      avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuCIbpPAVJYf9pTccLQsaOk-IYcP5Cu0unzqkpFhbn1boKQwDg66qPyufc0kD-lJ8XqTjxYRgGi18YtwZ02vDhSD3HmVB6XGZO-Iw5GYVJNs4SGjN2-6GJxXBzwV_BY4ywU9VG2crSKCj_N-_2Z7ni5ji9RLQ6jVmGb0T6U8jD5rlMSBRajuYfNCIZZic4PsKxFClQttRrL0HEZIfmlut8oxJGjd5dtxeCIUKh-n7Swuw0hs-ppsmNH_Vvonc4_hwQ2zzeezli5thFRW",
+      content: "這仙雀真的太萌了，胖嘟嘟的，點擊的時候還會嘰嘰叫一聲。雖然有挑戰性但音樂太好聽了，完全不生氣！🪽☁️",
+      timeAgo: "3 分鐘前",
+      likes: 18
+    },
+    {
+      id: "comment_flipper_2",
+      author: "御風少年",
+      avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuCYM1WChbAHYMPMMBB6IqLKRh344RuCgtHJQUCoQLBCBKw3yCE-aOsfbtLSEcsVDIbXUerUe4tNiXIbBtFCIOjZZifpxWJLqvQNYEECJIKecLeAWrPdQobwDxhidzAyX0AAEfYEU1nKTWrhBk1BGk5PlNyA9jhCkcjEq_NSLc2eQWtI1W7Onh5Ctnh_hQUbkXEFTEPa_bJwhghbbmaNoOE_tuNtF5sDdWGJLY9Ij7nnuvSHN-OAtuHW0xidpwgSld2kqNciIKzzweNx",
+      content: "配樂非常有古風意境，障礙物居然是精緻的紅燈籠和竹林，太有國風韻味了！拿到 100 分時解鎖了仙鶴外觀，愛了！",
+      timeAgo: "30 分鐘前",
+      likes: 22
+    }
   ]
 };
 
@@ -550,6 +569,22 @@ export const GAMES_DATA: Game[] = [
     image: checkersCover,
     description: "指掌之間祥光曜，點兵點將分輸贏！帶領英姿勃勃的「萌仙紅獅」攻城拔寨，手談鬥智，戰勝古雅仙閣中的「玉兔仙子」。支持單人對戰智力AI與雙同屏博弈，並可自由更換宮廷墨玉、紅金與翠白等多種精美棋色，妙趣無邊！",
     hotness: 98
+  },
+  {
+    id: "flipperbird",
+    title: "萌羽仙雀凌雲行",
+    category: "casual",
+    categoryName: "休閒益智",
+    tags: ["動作", "敏捷", "療癒", "單人遊戲"],
+    difficulty: "medium",
+    difficultyName: "中等",
+    playTime: "short",
+    playTimeName: "5分鐘內 (休閒)",
+    rating: 4.9,
+    timesPlayed: 42300,
+    image: flipperBirdCover,
+    description: "化身圓滾滾的萌羽仙雀，御風而行！穿過層層飄拂的彩燈古閣與祥雲屏障。收集金錢幣與仙桃點心，在絲滑古風樂曲中挑戰指尖飛翔極限！",
+    hotness: 96
   }
 ];
 
