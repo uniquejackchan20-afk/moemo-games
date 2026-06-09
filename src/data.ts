@@ -18,6 +18,7 @@ import mahjongCover from './assets/images/mahjong_cover_1780992105622.png';
 import fruitCover from './assets/images/fruit_cover_1780992115925.png';
 import checkersCover from './assets/images/checkers_cover_1780991935923.png';
 import flipperBirdCover from './assets/images/flipper_bird_cover.jpg';
+import supermarioCover from './assets/images/super_mario_cover.jpg';
 
 
 export const INITIAL_COMMENTS: Record<string, Comment[]> = {
@@ -310,6 +311,24 @@ export const INITIAL_COMMENTS: Record<string, Comment[]> = {
       timeAgo: "30 分鐘前",
       likes: 22
     }
+  ],
+  supermario: [
+    {
+      id: "comment_supermario_1",
+      author: "紅熊貓大俠",
+      avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuCIbpPAVJYf9pTccLQsaOk-IYcP5Cu0unzqkpFhbn1boKQwDg66qPyufc0kD-lJ8XqTjxYRgGi18YtwZ02vDhSD3HmVB6XGZO-Iw5GYVJNs4SGjN2-6GJxXBzwV_BY4ywU9VG2crSKCj_N-_2Z7ni5ji9RLQ6jVmGb0T6U8jD5rlMSBRajuYfNCIZZic4PsKxFClQttRrL0HEZIfmlut8oxJGjd5dtxeCIUKh-n7Swuw0hs-ppsmNH_Vvonc4_hwQ2zzeezli5thFRW",
+      content: "天啊！這簡直是國風版的超級瑪利歐！胖乎乎的小小紅熊貓跳起來頂瓦片、冒金幣的音效太魔性了！吃到仙桃變大還能抵擋一次傷害，太讚了！🍎🐼",
+      timeAgo: "1 分鐘前",
+      likes: 21
+    },
+    {
+      id: "comment_supermario_2",
+      author: "馬力歐骨灰玩家",
+      avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuCYM1WChbAHYMPMMBB6IqLKRh344RuCgtHJQUCoQLBCBKw3yCE-aOsfbtLSEcsVDIbXUerUe4tNiXIbBtFCIOjZZifpxWJLqvQNYEECJIKecLeAWrPdQobwDxhidzAyX0AAEfYEU1nKTWrhBk1BGk5PlNyA9jhCkcjEq_NSLc2eQWtI1W7Onh5Ctnh_hQUbkXEFTEPa_bJwhghbbmaNoOE_tuNtF5sDdWGJLY9Ij7nnuvSHN-OAtuHW0xidpwgSld2kqNciIKzzweNx",
+      content: "操作超級絲滑！跳躍物理曲線和慣性做得非常有水準，踩蘑菇狀的小包子怪還能高高躍起，背景還是山水畫，太有品味了！",
+      timeAgo: "18 分鐘前",
+      likes: 15
+    }
   ]
 };
 
@@ -585,6 +604,22 @@ export const GAMES_DATA: Game[] = [
     image: flipperBirdCover,
     description: "化身圓滾滾的萌羽仙雀，御風而行！穿過層層飄拂的彩燈古閣與祥雲屏障。收集金錢幣與仙桃點心，在絲滑古風樂曲中挑戰指尖飛翔極限！",
     hotness: 96
+  },
+  {
+    id: "supermario",
+    title: "桃源吉星大冒險",
+    category: "casual",
+    categoryName: "休閒益智",
+    tags: ["動作", "冒險", "闖關", "橫版", "國風"],
+    difficulty: "medium",
+    difficultyName: "中等",
+    playTime: "medium",
+    playTimeName: "5-15分鐘 (挑戰)",
+    rating: 4.9,
+    timesPlayed: 45700,
+    image: supermarioCover,
+    description: "化身活潑可愛的「小紅熊貓大俠」，深入古雅神祕的桃花源仙境！在清麗如畫的墨竹與飛簷瓦台間跳躍、奔跑。頂破金磚石板收集元寶和天桃仙桃、靈活避開和踩扁蹦跳的包子精怪，奪取青蓮福旗圓滿通關！",
+    hotness: 98
   }
 ];
 
